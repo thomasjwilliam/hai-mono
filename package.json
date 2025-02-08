@@ -48,6 +48,8 @@
     "vue-tsc": "^2.0.0"
   },
   "dependencies": {
+    "@primevue/themes": "^4.2.5",
+    "primevue": "^4.2.5",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   }
