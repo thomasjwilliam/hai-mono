@@ -7,7 +7,7 @@ import { AppButton } from '@tuskdesign/ui'
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <AppButton>Button</AppButton>
+    <AppButton label="Button" size="large"/>
   </div>
 </template>
 

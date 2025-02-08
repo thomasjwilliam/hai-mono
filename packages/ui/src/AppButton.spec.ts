@@ -3,7 +3,12 @@ import AppButton from './AppButton.vue';
 
 describe('AppButton', () => {
   it('renders properly', () => {
-    const wrapper = mount(AppButton, {})
-    expect(wrapper.text()).toContain('Welcome to AppButton')
+    const wrapper = mount(AppButton, {
+      props: {
+        label: 'Click me',
+        size: "medium"
+      }
+    })
+    expect(wrapper.text()).toContain('Click me')
   })
 });
