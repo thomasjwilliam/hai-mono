@@ -1,6 +1,7 @@
 {
   "name": "@tuskdesign/source",
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "version": "1.0.0",
