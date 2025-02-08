@@ -14,6 +14,12 @@
     },
     {
       "path": "./packages/util"
+    },
+    {
+      "path": "./apps/my-app-e2e"
+    },
+    {
+      "path": "./apps/my-app"
     }
   ]
 }
