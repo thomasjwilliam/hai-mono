@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { AppButton } from '@tuskdesign/ui'
 import { AppInput } from '@tuskdesign/ui'
+
+const value = ref(null);
 
 // defineProps<{}>()
 </script>
@@ -10,6 +13,8 @@ import { AppInput } from '@tuskdesign/ui'
     <h1>This is an about page</h1>
     <AppInput label="Input" />
     <AppButton label="Button" size="large"/>
+    <hr>
+    <InputText type="text" v-model="value" />
   </div>
 </template>
 

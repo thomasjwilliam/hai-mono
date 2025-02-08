@@ -1,3 +1,4 @@
+import './styles.css';
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
 import InputText from 'primevue/inputtext'
