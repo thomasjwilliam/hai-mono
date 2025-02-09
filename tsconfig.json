@@ -23,6 +23,9 @@
     },
     {
       "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/ui-vue-home"
     }
   ],
   "ts-node": {

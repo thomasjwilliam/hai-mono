@@ -21,7 +21,7 @@ import AppButton from "../../atoms/button/AppButton.vue";
 export interface Props {
   // .json or .csv
   accept: string
-  onUpload: (file: File | File[]) => void;
+  onUpload: () => void;
 }
 
 const props = withDefaults(defineProps<Props>(), { });
