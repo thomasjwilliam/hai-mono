@@ -2,20 +2,29 @@ import 'primeicons/primeicons.css'
 import './styles.css';
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import InputText from 'primevue/inputtext'
+import { definePreset } from '@primevue/themes';
 import Aura from '@primevue/themes/aura';
 import router from './router';
 import App from './app/App.vue';
 
 const app = createApp(App);
 app.use(router);
+
+const MyPreset = definePreset(Aura, {
+    components: {
+        button: {
+            borderRadius: '0'
+        }
+    }
+});
+
 app.use(PrimeVue, {
     theme: {
-        preset: Aura,
+        preset: MyPreset,
         options: {
             darkModeSelector: '.app-dark'
         }
     }
 });
-app.component('InputText', InputText)
+
 app.mount('#root');

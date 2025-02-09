@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
 // import HomeViewNew from '@tuskdesign/ui-vue-home'
-import AppLayout from '../layout/AppLayout.vue';
+import HomeLayout from '../layout/home/HomeLayout.vue';
+import ComposerLayout from '../layout/composer/ComposerLayout.vue';
 import HomeViewNew from '../views/landing/ui-vue-home.vue'
 
 const router = createRouter({
@@ -10,11 +11,16 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: AppLayout,
+      component: HomeLayout
+    },
+    {
+      path: '/composer',
+      name: 'composer',
+      component: ComposerLayout,
       children: [
         {
           path: '',
-          name: 'home-view',
+          name: 'composer-view',
           component: HomeViewNew
         }
       ]

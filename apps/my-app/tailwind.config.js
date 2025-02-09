@@ -1,0 +1,19 @@
+const { createGlobPatternsForDependencies } = require('@nx/vue/tailwind');
+const { join } = require('path');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['selector', '[class*="app-dark"]'],
+  content: [
+    join(__dirname, 'index.html'),
+    join(
+      __dirname,
+      'src/**/*!(*.stories|*.spec).{vue,ts,tsx,js,jsx}'
+    ),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('tailwindcss-primeui')],
+};
