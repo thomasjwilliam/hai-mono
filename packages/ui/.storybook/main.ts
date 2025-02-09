@@ -2,14 +2,12 @@ import type { StorybookConfig } from '@storybook/vue3-vite';
 
 const config: StorybookConfig = {
   stories: [
-    
     '../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'
   ],
   addons: ['@storybook/addon-essentials' , '@storybook/addon-interactions' ],
   framework: {
     name: '@storybook/vue3-vite',
     options: {
-      
       builder: {
         viteConfigPath: 'vite.config.ts',
       },
@@ -17,7 +15,7 @@ const config: StorybookConfig = {
     },
   },
   core: {
-    disableTelemetry: true, // 👈 Disables telemetry
+    disableTelemetry: true, // Disable telemetry
   },
 };
 
