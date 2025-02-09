@@ -11,6 +11,9 @@ const { toggleDarkMode, isDarkTheme } = useLayout();
       <router-link to="/">
         <span class="">HAI SAKAI</span>
       </router-link>
+      <router-link to="/dashboard">
+        <span class="">dashboard</span>
+      </router-link>
       <router-link to="/composer">
         <span class="">composer</span>
       </router-link>

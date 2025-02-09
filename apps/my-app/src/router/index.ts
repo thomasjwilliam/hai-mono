@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeLayout from '../layout/home/HomeLayout.vue';
 import ComposerLayout from '../layout/composer/ComposerLayout.vue';
 import ComposerBody from '../views/composer/ComposerBody.vue'
+import DashboardLayout from '../layout/dashboard/DashboardLayout.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeLayout
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: DashboardLayout
     },
     {
       path: '/composer',

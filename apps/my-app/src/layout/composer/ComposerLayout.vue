@@ -12,3 +12,4 @@ import ComposerTopbar from './ComposerTopbar.vue';
     <ComposerFooter class="fixed bottom-0 w-full border"/>
   </div>
 </template>
+
