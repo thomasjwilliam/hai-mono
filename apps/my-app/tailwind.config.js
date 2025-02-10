@@ -3,7 +3,7 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['selector', '[class*="app-dark"]'],
+  darkMode: ['selector', '[class*="dark"]'],
   content: [
     join(__dirname, 'index.html'),
     join(

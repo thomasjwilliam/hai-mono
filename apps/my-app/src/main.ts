@@ -6,6 +6,7 @@ import { definePreset } from '@primevue/themes';
 import Aura from '@primevue/themes/aura';
 import router from './router';
 import App from './app/App.vue';
+import customThemePreset from './plugins/primevue';
 
 const app = createApp(App);
 app.use(router);
@@ -18,13 +19,17 @@ const MyPreset = definePreset(Aura, {
     }
 });
 
+// app.use(PrimeVue, {
+//     theme: {
+//         preset: MyPreset,
+//         options: {
+//             darkModeSelector: '.app-dark'
+//         }
+//     }
+// });
+
 app.use(PrimeVue, {
-    theme: {
-        preset: MyPreset,
-        options: {
-            darkModeSelector: '.app-dark'
-        }
-    }
+  theme: customThemePreset
 });
 
 app.mount('#root');

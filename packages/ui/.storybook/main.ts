@@ -4,14 +4,18 @@ const config: StorybookConfig = {
   stories: [
     '../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'
   ],
-  addons: ['@storybook/addon-essentials' , '@storybook/addon-interactions' ],
+  addons: [
+      '@storybook/addon-essentials',
+      '@storybook/addon-interactions',
+      'storybook-dark-mode'
+  ],
   framework: {
     name: '@storybook/vue3-vite',
     options: {
       builder: {
         viteConfigPath: 'vite.config.ts',
       },
-      
+
     },
   },
   core: {
@@ -20,8 +24,6 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-
 
 
 // To customize your Vite configuration you can use the viteFinal field.

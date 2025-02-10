@@ -41,6 +41,7 @@
     "nx": "20.4.2",
     "postcss": "8.4.40",
     "storybook": "^8.4.6",
+    "storybook-dark-mode": "^4.0.2",
     "tailwindcss": "3.2.7",
     "ts-node": "10.9.1",
     "tslib": "^2.8.0",
