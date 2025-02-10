@@ -12,7 +12,7 @@ const value = ref(null);
   <div class="about">
     <h1>This is an about page</h1>
     <AppInput label="Input" />
-    <AppButton label="Button" size="large"/>
+    <AppButton text="Button" size="large"/>
     <hr>
     <InputText type="text" v-model="value" />
   </div>

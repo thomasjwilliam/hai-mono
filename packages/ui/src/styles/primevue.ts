@@ -1,13 +1,5 @@
-import Aura from '@primevue/themes/aura';
-
-export const theme = {
-  preset: Aura,
-  options: {
-    darkModeSelector: '.app-dark'
-  }
-}
-
 import { definePreset } from '@primevue/themes';
+import Aura from '@primevue/themes/aura';
 
 const customThemePreset = definePreset(Aura, {
   semantic: {
@@ -59,7 +51,7 @@ const customThemePreset = definePreset(Aura, {
   },
   components: {
     button: {
-      borderRadius: '0',
+      borderRadius: '0.25rem',
     }
   }
 });
@@ -67,10 +59,6 @@ const customThemePreset = definePreset(Aura, {
 export default {
   preset: customThemePreset,
   options: {
-    darkModeSelector: '.dark',
-    cssLayer: {
-      name: 'primevue',
-      order: 'tailwind-theme, tailwind-base, primevue, tailwind-utilities',
-    },
+    darkModeSelector: '.dark'
   },
 };

@@ -9,31 +9,53 @@ const meta = {
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
     argTypes: {
-        label: {
-            description: 'Button text',
-            control: 'text',
-        },
-        color: {
-            description: 'Button color',
-            control: 'select',
-            options: [
-                'primary',
-                'secondary',
-                'help',
-                'info',
-                'success',
-                'warn',
-                'danger'
-            ]
-        },
-        size: {
-            description: 'Button size',
-            control: 'select',
-            options: [
-                'small',
-                'large',
-            ]
-        },
+      color: {
+        description: 'Button color',
+        control: 'select',
+        options: [
+          'text',
+          'primary',
+          'success',
+          'secondary',
+          'error',
+          'warn'
+        ]
+      },
+      disabled: {
+        description: 'whether the button is disabled',
+        control: 'boolean',
+      },
+      icon: {
+        control: 'text',
+      },
+      iconPosition: {
+        control: 'select',
+        options: [
+          'left',
+          'right',
+        ]
+      },
+      size: {
+        description: 'Button size',
+        control: 'select',
+        options: [
+          'small',
+          'large',
+        ]
+      },
+      style: {
+        description: 'Button style',
+        control: 'select',
+        options: [
+          'outlined',
+          'text',
+          'link',
+        ]
+      },
+      text: {
+        description: 'Button text',
+        control: 'text',
+      },
     },
     args: {
     }, // default value
@@ -44,14 +66,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        type: 'primary',
-        label: 'Button',
+      color: 'primary',
+      text: 'Button',
     },
 };
 
 export const Secondary: Story = {
     args: {
-        type: 'secondary',
-        label: 'Button',
+      color: 'secondary',
+      text: 'Button',
     },
 };

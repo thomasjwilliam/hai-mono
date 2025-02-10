@@ -1,0 +1,86 @@
+@import "button.css";
+
+/*@import 'tailwindcss/theme.css' layer(tailwind-theme);*/
+/*@import './custom-preflight.css' layer(tailwind-base);*/
+@import 'tailwindcss/base' layer(tailwind-base);
+/* @import "tailwindcss/preflight.css" layer(tailwind-base); */
+@import 'tailwindcss/utilities' layer(tailwind-utilities);
+
+@layer tailwind-theme, tailwind-base, primevue, tailwind-utilities;
+
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+/*@import "tailwindcss/base";*/
+/*@import "tailwindcss/components";*/
+/*@import "./primevue/tailwind.css";*/
+/*@import "tailwindcss/utilities";*/
+
+/* https://github.com/orgs/primefaces/discussions/2177 */
+:root {
+  /* Base/Theme Colors */
+  /* https://www.tints.dev/?purple=4E7FD2&green=62A6BC */
+  --primary-color-50: #EFF3FB;
+  --primary-color-100: #DAE4F6;
+  --primary-color-200: #BACDED;
+  --primary-color-300: #95B2E4;
+  --primary-color-400: #7198DB;
+  --primary-color-500: #4E7FD2;
+  --primary-color-600: #2E61B7;
+  --primary-color-700: #23498A;
+  --primary-color-800: #18315E;
+  --primary-color-900: #0B182D;
+  --primary-color-950: #060D18;
+  --secondary-color-50: #F1F7F9;
+  --secondary-color-100: #DFEDF1;
+  --secondary-color-200: #BFDAE4;
+  --secondary-color-300: #A2CAD7;
+  --secondary-color-400: #82B8CA;
+  --secondary-color-500: #62A6BC;
+  --secondary-color-600: #458AA1;
+  --secondary-color-700: #34687A;
+  --secondary-color-800: #22434F;
+  --secondary-color-900: #112227;
+  --secondary-color-950: #091215;
+
+  /* Core System Colors */
+  /* https://www.tints.dev/?red=E94949&blue=3B82F6&error=E94949&success=55AE79&info=3B82F6&warn=EBB55A */
+  --error-color-50: #F39B9B;
+  --error-color-100: #F29292;
+  --error-color-200: #F08080;
+  --error-color-300: #ED6D6D;
+  --error-color-400: #EB5B5B;
+  --error-color-500: #E94949;
+  --error-color-600: #E52525;
+  --error-color-700: #C81818;
+  --error-color-800: #A41414;
+  --error-color-900: #7F0F0F;
+  --error-color-950: #6D0D0D;
+  --warn-color-50: #F3D39B;
+  --warn-color-100: #F2D196;
+  --warn-color-200: #F0C984;
+  --warn-color-300: #EEC277;
+  --warn-color-400: #EDBC69;
+  --warn-color-500: #EBB55A;
+  --warn-color-600: #E6A432;
+  --warn-color-700: #D18E19;
+  --warn-color-800: #A87214;
+  --warn-color-900: #845910;
+  --warn-color-950: #6D4A0D;
+  --success-color-50: #B0D9C0;
+  --success-color-100: #A5D4B8;
+  --success-color-200: #90CAA8;
+  --success-color-300: #7CC097;
+  --success-color-400: #6AB88A;
+  --success-color-500: #55AE79;
+  --success-color-600: #4A9B6B;
+  --success-color-700: #3F835A;
+  --success-color-800: #356F4C;
+  --success-color-900: #2B5A3E;
+  --success-color-950: #264F36;
+}
+
+html {
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+}
