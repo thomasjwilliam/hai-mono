@@ -82,5 +82,6 @@
 }
 
 html {
-  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  /*https://modernfontstacks.com/*/
+  font-family: system-ui, sans-serif;
 }
