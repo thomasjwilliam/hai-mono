@@ -4,7 +4,7 @@
         ref="fileUpload"
         mode="basic"
         :accept="accept"
-        @uploader="onUpload($event)"
+        @uploader="onUpload()"
     />
     <AppButton
         label="Upload"
@@ -24,7 +24,7 @@ export interface Props {
   onUpload: () => void;
 }
 
-const props = withDefaults(defineProps<Props>(), { });
+defineProps<Props>()
 
 const fileUpload = ref();
 

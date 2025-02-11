@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import DesignFooter from './DesignFooter.vue';
 import DesignTopbar from './DesignTopbar.vue';
-import AppButton from "primevue/button";
-import MyButton from "./Button.vue";
+import Library from "./library/Library.vue";
 
 </script>
 
@@ -10,13 +9,7 @@ import MyButton from "./Button.vue";
   <div>
     <DesignTopbar class="w-full border" />
     <div class="py-10 border">
-      <template>
-        <AppButton
-          label="Get Started"
-          class="px-2 rounded-sm"
-        />
-      </template>
-      <MyButton label="Click me" />
+      <Library />
     </div>
     <DesignFooter class="w-full border"/>
   </div>
