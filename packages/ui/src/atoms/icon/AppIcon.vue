@@ -66,12 +66,12 @@ const iconPath = computed(() => {
 })
 
 const colorMap = {
-  text: 'var(--text-color, darkslategrey)',
-  primary: 'var(--primary-color, #007bff)',
-  secondary: 'var(--secondary-color, #6c757d)',
-  success: 'var(--success-color, #28a745)',
-  error: 'var(--error-color, #dc3545)',
-  warn: 'var(--warn-color, #ffc107)'
+  text: 'var(--p-text-color)',
+  primary: 'var(--primary-color-500)',
+  secondary: 'var(--secondary-color-500)',
+  success: 'var(--success-color-500)',
+  error: 'var(--error-color-500)',
+  warn: 'var(--warn-color-500)'
 }
 
 </script>

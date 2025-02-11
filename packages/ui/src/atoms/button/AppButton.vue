@@ -39,14 +39,29 @@ const onClick = () => {
   emit("click");
 };
 
+const colorMap = {
+  text: 'var(--p-text-color)',
+  primary: 'var(--primary-color-500)',
+  secondary: 'var(--secondary-color-500)',
+  success: 'var(--success-color-500)',
+  error: 'var(--error-color-500)',
+  warn: 'var(--warn-color-500)'
+}
+
 const styleObject = computed(() => ({
-  ...(props.color === "text" && props.style === "outlined" && {
-    color: "black",
-    borderColor: "#c2c2c2",
+  ...((props.style === "outlined" || props.style === "text" || props.style === "link") && {
+    color: colorMap[props.color],
   }),
-  ...(props.color === "text" && props.style === "link" && {
-    color: "black",
-  })
+
+  // backgroundColor: colorMap[props.color],
+
+  // ...(props.color === "text" && props.style === "outlined" && {
+  //   color: colorMap[props.color],
+  //   borderColor: "#c2c2c2",
+  // }),
+  // ...(props.color === "text" && props.style === "link" && {
+  //   color: colorMap[props.color],
+  // })
 }))
 
 </script>

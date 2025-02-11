@@ -60,7 +60,15 @@ const meta: Meta<typeof AppButton> = {
     },
   },
   // default arg values
-  args: {},
+  args: {
+    color: 'primary',
+    disabled: false,
+    icon: '',
+    iconPosition: '',
+    size: '',
+    style: '',
+    text: 'Button'
+  },
 }
 export default meta;
 
