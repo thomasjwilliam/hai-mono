@@ -2,6 +2,7 @@ import { setup } from "@storybook/vue3"
 import { themes } from '@storybook/theming';
 import PrimeVue from 'primevue/config'
 import customThemePreset from '../src/styles/primevue';
+import '../src/styles/app.css'
 
 export const parameters = {
   darkMode: {
