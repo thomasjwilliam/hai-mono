@@ -5,8 +5,7 @@ describe('AppButton', () => {
   it('renders properly', () => {
     const wrapper = mount(AppButton, {
       props: {
-        label: 'Click me',
-        size: "medium"
+        text: 'Click me',
       }
     })
     expect(wrapper.text()).toContain('Click me')
