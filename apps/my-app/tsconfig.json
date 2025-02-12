@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/ui-vue-home"
+    },
+    {
       "path": "../../packages/ui"
     },
     {

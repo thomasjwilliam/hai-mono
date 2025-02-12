@@ -5,6 +5,7 @@ import ComposerLayout from '../layout/composer/ComposerLayout.vue';
 import ComposerBody from '../views/composer/ComposerBody.vue'
 import DashboardLayout from '../layout/dashboard/DashboardLayout.vue';
 import DesignLayout from '../layout/design/DesignLayout.vue';
+import {DashboardPage} from '@tuskdesign/ui'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +36,11 @@ const router = createRouter({
       path: '/design',
       name: 'design',
       component: DesignLayout
+    },
+    {
+      path: '/grid',
+      name: 'grid',
+      component: DashboardPage
     },
     {
       path: '/about',

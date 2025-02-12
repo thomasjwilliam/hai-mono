@@ -11,10 +11,6 @@
 
 <style>
 header {
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
 }
 
 .logo {

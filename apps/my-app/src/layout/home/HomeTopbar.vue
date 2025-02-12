@@ -17,6 +17,9 @@ const { toggleDarkMode, isDarkTheme } = useLayout();
       <router-link to="/composer">
         <span class="">composer</span>
       </router-link>
+      <router-link to="/grid">
+        <span class="">grid</span>
+      </router-link>
     </div>
     <AppButton
         size="small"
