@@ -1,22 +1,3 @@
-@import "button.css";
-
-/*@import 'tailwindcss/theme.css' layer(tailwind-theme);*/
-/*@import './custom-preflight.css' layer(tailwind-base);*/
-@import 'tailwindcss/base' layer(tailwind-base);
-/* @import "tailwindcss/preflight.css" layer(tailwind-base); */
-@import 'tailwindcss/utilities' layer(tailwind-utilities);
-
-@layer tailwind-theme, tailwind-base, primevue, tailwind-utilities;
-
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
-
-/*@import "tailwindcss/base";*/
-/*@import "tailwindcss/components";*/
-/*@import "./primevue/tailwind.css";*/
-/*@import "tailwindcss/utilities";*/
-
 /* https://github.com/orgs/primefaces/discussions/2177 */
 :root {
   /* Base/Theme Colors */

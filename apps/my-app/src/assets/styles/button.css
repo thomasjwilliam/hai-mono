@@ -1,6 +1,0 @@
-.app-button {
-  @apply text-red-500
-    /* spacing */
-  px-8;
-  padding: 1rem;
-}
