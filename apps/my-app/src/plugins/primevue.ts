@@ -81,11 +81,7 @@ const theme1Preset = definePreset(Aura, {
 export const theme1 = {
   preset: theme1Preset,
   options: {
-    darkModeSelector: '.dark',
-    cssLayer: {
-      name: 'primevue',
-      order: 'tailwind-theme, tailwind-base, primevue, tailwind-utilities',
-    },
+    darkModeSelector: ".dark",
   },
 };
 
@@ -162,11 +158,8 @@ const theme2Preset = definePreset(Aura, {
 
 export const theme2 = {
   preset: theme2Preset,
+  // preset: 'none',
   options: {
-    darkModeSelector: '.dark',
-    cssLayer: {
-      name: 'primevue',
-      order: 'tailwind-theme, tailwind-base, primevue, tailwind-utilities',
-    },
+    darkModeSelector: ".dark",
   },
 };

@@ -21,7 +21,7 @@
     "src/**/*.spec.vue",
     "src/**/*.test.vue",
     "vite.config.ts",
-    "vite.config.mts",
+    "vite.config.ts",
     "vitest.config.ts",
     "vitest.config.mts",
     "src/**/*.test.tsx",
