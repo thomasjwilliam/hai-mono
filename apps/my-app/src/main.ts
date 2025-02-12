@@ -1,5 +1,6 @@
 import 'primeicons/primeicons.css'
 import './assets/styles/app.css'
+import '@tuskdesign/ui/styles';
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
 import router from './router';
