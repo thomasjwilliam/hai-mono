@@ -24,7 +24,7 @@ export type IconNames = keyof typeof icons;
 export type IconSize = 'sm' | 'md' | 'lg' | 'xl' | string | number;
 
 export interface Props {
-  color?: "text" | "primary" | "secondary" | "success" | "error" | "warn"
+  color?: "primary" | "secondary" | "success" | "error" | "warn"  | "text"
   name: IconNames
   size?: IconSize;
 }

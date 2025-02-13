@@ -8,20 +8,25 @@
     :size="size"
     :variant="style"
     @click="onClick"
-  />
+  >
+    <template #icon v-if="icon">
+      <AppIcon :name="icon" />
+    </template>
+  </Button>
 </template>
 
 <script setup lang="ts">
 import {computed} from "vue";
 // https://primevue.org/button/
 import Button from 'primevue/button';
+import AppIcon, { IconNames }  from "../../atoms/icon/AppIcon.vue";
 
 export interface Props {
-  color?: "text" | "primary" | "secondary" | "success" | "error" | "warn";
+  color?: "primary" | "secondary" | "success" | "error" | "warn" | "text";
   disabled?: boolean;
-  icon?: string;
+  icon?: IconNames;
   iconPosition?: "left" | "right";
-  size?: "small" | "large";
+  size?: "sm" | "md" | "lg";
   style?: "outlined" | "text" | "link";
   text?: string;
 }
@@ -40,10 +45,22 @@ const onClick = () => {
 };
 
 const color = computed(() => {
-  if (props.color === "error") {
+  if (props.color === "text") {
+    return "contrast"
+  } else if (props.color === "error") {
     return "danger"
   } else {
     return props.color
+  }
+})
+
+const size = computed(() => {
+  if (props.size === "sm") {
+    return "small"
+  } else if (props.size === "lg") {
+    return "large"
+  } else {
+    return undefined
   }
 })
 </script>
