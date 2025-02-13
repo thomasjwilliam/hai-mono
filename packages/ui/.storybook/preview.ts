@@ -18,8 +18,6 @@ export const parameters = {
 
 setup((app) => {
     app.use(PrimeVue, {
-      // theme: 'none',
-      // theme: theme,
       theme: customThemePreset,
     });
 })
