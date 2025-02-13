@@ -1,3 +1,5 @@
+// noinspection HtmlUnknownAttribute
+
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
 import AppIcon from './AppIcon.vue';
@@ -83,6 +85,7 @@ export const PredefinedSizes: Story = {
     components: { AppIcon },
     template: `
       <div style="display: flex; gap: 1rem; align-items: center;">
+        <div v-for="foo of bar">Predefined Sizes</div>
         <AppIcon name="home" size="sm" />
         <AppIcon name="home" size="md" />
         <AppIcon name="home" size="lg" />
