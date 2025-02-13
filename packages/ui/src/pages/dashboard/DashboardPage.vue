@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <div class="grid">
-      <header class="grid-span-24">
+    <div class="app-grid">
+      <header class="app-grid-span-24">
         <span class="logo">Logo</span>
         <span>Link</span>
         <span>Link</span>
       </header>
     </div>
-    <main class="grid">
+    <main class="app-grid">
 
-      <div class="grid-span-12 flex-col">
+      <div class="app-grid-span-6 d-flex flex-col">
 
         <div>
           <div>simple</div>
@@ -17,13 +17,13 @@
         </div>
 
         <!-- Panel with scrollable section -->
-        <section style="display: flex; flex-direction: column; height: 100%;">
+        <section class="height-100 d-flex flex-col">
           <h4>Scrollable content</h4>
           <p>Good for long contents</p>
-          <div style="position: relative; height: 100%;">
+          <div class="height-100 pos-relative">
             <div class="scrollable">
               <div>inside scrollable</div>
-              <div v-for="index in 3" :key="index">
+              <div v-for="index in 300" :key="index">
                 Document {{ index }}
               </div>
             </div>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Scrollable section -->
-        <div style="position: relative; height: 100%;">
+        <div class="height-100 pos-relative">
           <div class="scrollable">
             <div>inside scrollable</div>
             <section>
@@ -49,17 +49,50 @@
 
       </div>
 
-      <div class="grid-span-6">
-        <div style="position: relative; height: 100%;">
-          <div class="scrollable">
+      <div class="app-grid-span-6">
+        <div class="height-100 min-height-0 pos-relative">
+          <div class="scrollable min-height-0">
             <section>
-              <div v-for="index in 100" :key="index">
+              <div v-for="index in 300" :key="index">
                 Context {{ index }}
               </div>
             </section>
           </div>
         </div>
       </div>
+
+      <div class="app-grid-span-6 d-flex flex-col">
+        <!-- Panel with scrollable section -->
+        <div class="d-flex flex-col height-100">
+          <div class="height-100">
+            <section class="d-flex flex-col height-100">
+              <h4>Scrollable content</h4>
+              <p>Good for long contents</p>
+              <div class="height-100 pos-relative">
+                <div class="scrollable">
+                  <div>inside scrollable</div>
+                  <div v-for="index in 3" :key="index">
+                    Document {{ index }}
+                  </div>
+                </div>
+              </div>
+              <div>footer stuff</div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-grid-span-6 d-flex flex-col">
+        <div>foo</div>
+        <div class="pos-relative d-flex flex-col min-height-0 height-100">
+          <div class="scrollable min-height-0 height-100">
+            <div v-for="index in 300" :key="index">
+              Document {{ index }}
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer>
       <span>Link</span>
@@ -70,29 +103,55 @@
 </template>
 
 <script setup lang="ts">
-import Header from "../../organisms/header/Header.vue";
 </script>
 
 <style>
 
-.flex-col {
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.min-height-0 {
+  min-height: 0;
+}
+
+.d-flex {
   display: flex;
+}
+
+.flex-col {
   flex-direction: column;
 }
 
-.grid-span-6 {
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.app-grid-span-6 {
   grid-column: span 6;
 }
 
-.grid-span-12 {
+.app-grid-span-12 {
   grid-column: span 12;
 }
 
-.grid-span-24 {
+.app-grid-span-24 {
   grid-column: span 24;
 }
 
-.grid {
+.app-grid {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
@@ -129,8 +188,6 @@ main {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
-  margin: auto;
   overflow-y: scroll;
 }
 
