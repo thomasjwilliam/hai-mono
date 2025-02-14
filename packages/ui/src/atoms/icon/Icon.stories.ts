@@ -8,11 +8,12 @@ import { icons } from './icons';
 const meta: Meta<typeof Icon> = {
   title: 'Atoms/Icon',
   component: Icon,
-  // automatically generate docsPage
-  // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
-  // args behaviour
-  // https://storybook.js.org/docs/vue/api/argtypes
+  args: {
+    color: 'text',
+    name: "home",
+    size: 'md'
+  },
   argTypes: {
     color: {
       description: 'Icon color',
@@ -38,13 +39,7 @@ const meta: Meta<typeof Icon> = {
       options: ['sm', 'md', 'lg', 'xl'],
       allowArbitraryValue: true,
     }
-  },
-  // default arg values
-  args: {
-    color: 'text',
-    name: "home",
-    size: 'md'
-  },
+  }
 }
 export default meta;
 

@@ -7,5 +7,4 @@ export {default as primeVueTheme} from './styles/primevue'
 
 // Component library
 export {default as Icon} from './atoms/icon/Icon.vue'
-export {default as AppInput} from './atoms/input/AppInput.vue'
 export {default as DashboardPage} from './pages/dashboard/DashboardPage.vue'

@@ -14,15 +14,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import {computed, ref} from 'vue';
+// https://primevue.org/fileupload/
 import FileUpload from 'primevue/fileupload';
 import Button from "../../atoms/button/Button.vue";
 
-defineProps<{
-  // .json or .csv
-  accept: string
+const props = defineProps<{
+  accept: "csv" | "json"
   onUpload: () => void;
 }>()
+
+const accept = computed(() => {
+  if (props.accept === "csv") {
+    return ".csv";
+  } else {
+    return ".json";
+  }
+})
 
 const fileUpload = ref();
 

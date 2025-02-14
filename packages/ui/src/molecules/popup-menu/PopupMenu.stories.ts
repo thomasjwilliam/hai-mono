@@ -7,21 +7,28 @@ import PopupMenu from './PopupMenu.vue';
 const meta: Meta<typeof PopupMenu> = {
   title: 'Molecules/PopupMenu',
   component: PopupMenu,
-  // automatically generate docsPage
-  // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
-  // args behaviour
-  // https://storybook.js.org/docs/vue/api/argtypes
+  args: {
+    color: 'primary',
+    disabled: false,
+    icon: 'dots-vertical',
+    items: [
+      { label: 'Item 1', icon: 'pi pi-pencil', onClick: () => alert('Clicked Item 1') },
+      { label: 'Item 2', icon: 'pi pi-trash', onClick: () => alert('Clicked Item 2') },
+      { label: 'Item 3', icon: 'pi pi-plus' }, // No onClick handler for this
+    ],
+    size: '',
+    variant: '',
+  },
   argTypes: {
     color: {
       description: 'Menu button color',
       control: 'select',
       options: [
-        'text',
         'primary',
         'success',
         'secondary',
-        'error',
+        'danger',
         'warn'
       ]
     },
@@ -30,7 +37,11 @@ const meta: Meta<typeof PopupMenu> = {
       control: 'boolean',
     },
     icon: {
-      control: 'text',
+      control: 'select',
+      options: [
+        'dots-vertical',
+        'home'
+      ]
     },
     items: {
       description: 'An array of menu items. Each item should follow the MenuItem interface.',
@@ -40,32 +51,20 @@ const meta: Meta<typeof PopupMenu> = {
       description: 'Button size',
       control: 'select',
       options: [
-        'small',
-        'large',
+        'sm',
+        'md',
+        'lg',
       ]
     },
-    style: {
-      description: 'Button style',
+    variant: {
+      description: 'Button variant',
       control: 'select',
       options: [
         'outlined',
-        'text',
-        'link',
+        'text'
       ]
     },
-  },
-  // default arg values
-  args: {
-    color: 'primary',
-    disabled: false,
-    items: [
-      { label: 'Item 1', icon: 'pi pi-pencil', onClick: () => alert('Clicked Item 1') },
-      { label: 'Item 2', icon: 'pi pi-trash', onClick: () => alert('Clicked Item 2') },
-      { label: 'Item 3', icon: 'pi pi-plus' }, // No onClick handler for this
-    ],
-    size: '',
-    style: '',
-  },
+  }
 }
 export default meta;
 

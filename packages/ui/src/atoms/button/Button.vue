@@ -34,7 +34,7 @@ const props = withDefaults(defineProps<{
 })
 
 const emit = defineEmits<{
-  (e: 'click'): void
+  (e: 'click', event:Event): void
 }>()
 
 const color = computed(() => {
@@ -75,8 +75,8 @@ const iconSize = computed(() => {
   }
 })
 
-const onClick = () => {
-  emit("click");
+const onClick = (event: Event) => {
+  emit("click", event);
 };
 </script>
 

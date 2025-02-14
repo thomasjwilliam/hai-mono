@@ -8,10 +8,7 @@ import { icons } from '../icon/icons';
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
   component: Button,
-  // automatically generate docsPage
-  // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
-  // default arg values
   args: {
     color: 'primary',
     disabled: false,
@@ -21,8 +18,6 @@ const meta: Meta<typeof Button> = {
     variant: '',
     text: 'Button'
   },
-  // args behaviour
-  // https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     color: {
       control: 'select',
@@ -56,6 +51,7 @@ const meta: Meta<typeof Button> = {
       ]
     },
     variant: {
+      description: 'Button variant',
       control: 'select',
       options: [
         'outlined',

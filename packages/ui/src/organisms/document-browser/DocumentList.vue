@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, reactive} from "vue";
+import {computed} from "vue";
 import Skeleton from 'primevue/skeleton';
 import DataView from 'primevue/dataview';
 import type {DocumentListItem as DocumentListItemType} from "./DocumentBrowser.state";
@@ -44,8 +44,6 @@ const emit = defineEmits<{
   (e: 'edit-doc', id: string): void
   (e: 'view-doc', id: string): void
 }>()
-
-const documents = reactive(props.documents);
 
 const isEmpty = computed(() => props.documents.length === 0)
 

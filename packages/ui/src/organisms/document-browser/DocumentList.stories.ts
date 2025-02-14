@@ -7,7 +7,7 @@ import {FakeDocumentBrowserState} from "./DocumentBrowser.state";
 import * as DocumentListItemStories from './DocumentListItem.stories';
 
 const meta: Meta<typeof DocumentList> = {
-  title: 'Organisms/DocumentList',
+  title: 'Organisms/DocumentBrowser/DocumentList',
   component: DocumentList,
   tags: ['autodocs'],
   args: {
@@ -26,28 +26,19 @@ export const Default: Story = {
   args: {
     documents: FakeDocumentBrowserState.documents,
     loading: false
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
+  }
 };
 
 export const Loading: Story = {
   args: {
     documents: [],
     loading: true
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
+  }
 };
 
 export const Empty: Story = {
   args: {
     ...Loading.args,
     loading: false
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
+  }
 };

@@ -34,7 +34,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 1
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-01"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -52,7 +52,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 1
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-02"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -70,7 +70,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 2
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-03"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -88,7 +88,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 2
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-04"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -106,7 +106,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 3
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-05"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -124,7 +124,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: false,
         tabId: 3
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-06"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -142,7 +142,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 4
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-07"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -160,7 +160,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 4
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-08"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -178,7 +178,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 5
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-09"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -196,7 +196,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: false,
         tabId: 5
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-10"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -214,7 +214,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 6
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-11"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -232,7 +232,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 6
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-12"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -250,7 +250,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 7
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-13"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -268,7 +268,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 7
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-14"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -286,7 +286,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 8
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-15"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -304,7 +304,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: false,
         tabId: 8
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-16"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -322,7 +322,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 9
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-17"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -340,7 +340,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 9
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-18"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -358,7 +358,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 10
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-19"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",
@@ -376,7 +376,7 @@ export const FakeDocumentBrowserState: DocumentBrowserState = {
         available: true,
         tabId: 10
       }],
-      dateCreated: new Date(),
+      dateCreated: new Date("2025-01-20"),
       dateModified: new Date(),
       metadata: [{
         name: "Author",

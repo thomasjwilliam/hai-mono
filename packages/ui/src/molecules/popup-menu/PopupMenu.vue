@@ -6,16 +6,11 @@
       :icon="icon"
       :severity="color"
       :size="size"
-      :variant="style"
-      @click="toggle"
+      :variant="variant"
       aria-haspopup="true"
       aria-controls="overlay_menu"
-      :style="styleObject"
-    >
-      <template #icon>
-        <Icon name="dots-vertical" :color="color" />
-      </template>
-    </Button>
+      @click="toggle"
+    />
     <Menu
       ref="menu"
       id="overlay_menu"
@@ -25,10 +20,10 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref} from "vue";
-import Button from 'primevue/button';
+import {ref} from "vue";
+import Button from '../../atoms/button/Button.vue';
+// https://primevue.org/menu/#popup
 import Menu from 'primevue/menu';
-import Icon from "../../atoms/icon/Icon.vue";
 
 interface MenuItem {
   icon?: string;
@@ -37,16 +32,16 @@ interface MenuItem {
 }
 
 const props = withDefaults(defineProps<{
-  color?: "text" | "primary" | "secondary" | "success" | "error" | "warn";
+  color?: "primary" | "secondary" | "success" | "danger" | "warn";
   disabled?: boolean;
-  icon?: string;
+  icon?: "home" | "dots-vertical";
   items: MenuItem[];
-  size?: "small" | "large";
-  style?: "outlined" | "text" | "link";
+  size?: "sm"| "md" | "lg";
+  variant?: "outlined" | "text";
 }>(), {
   color: "primary",
   disabled: false,
-  icon: "pi pi-ellipsis-v",
+  icon: "dots-vertical",
 });
 
 const menu = ref();
@@ -59,21 +54,6 @@ const items = ref([
     }))
   }
 ]);
-
-const colorMap = {
-  text: 'var(--p-text-color)',
-  primary: 'var(--primary-color-500)',
-  secondary: 'var(--secondary-color-500)',
-  success: 'var(--success-color-500)',
-  error: 'var(--error-color-500)',
-  warn: 'var(--warn-color-500)'
-}
-
-const styleObject = computed(() => ({
-  ...((props.style === "outlined" || props.style === "text" || props.style === "link") && {
-    color: colorMap[props.color],
-  }),
-}))
 
 const toggle = (event: Event) => {
   menu.value.toggle(event);

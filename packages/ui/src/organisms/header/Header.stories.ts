@@ -5,11 +5,16 @@ import Header from './Header.vue';
 const meta: Meta<typeof Header> = {
   title: 'Molecules/Header',
   component: Header,
-  // automatically generate docsPage
-  // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
-  // args behaviour
-  // https://storybook.js.org/docs/vue/api/argtypes
+  args: {
+    color: 'primary',
+    disabled: false,
+    icon: '',
+    iconPosition: '',
+    size: '',
+    style: '',
+    text: 'Button'
+  },
   argTypes: {
     color: {
       description: 'Button color',
@@ -58,16 +63,6 @@ const meta: Meta<typeof Header> = {
       description: 'Button text',
       control: 'text',
     },
-  },
-  // default arg values
-  args: {
-    color: 'primary',
-    disabled: false,
-    icon: '',
-    iconPosition: '',
-    size: '',
-    style: '',
-    text: 'Button'
   },
 }
 export default meta;

@@ -17,10 +17,8 @@ export const ActionsData = {
 };
 
 const meta: Meta<typeof DocumentListItem> = {
-  title: 'Organisms/DocumentListItem',
+  title: 'Organisms/DocumentBrowser/DocumentListItem',
   component: DocumentListItem,
-  // automatically generate docsPage
-  // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
   excludeStories: /.*Data$/,
   args: {
@@ -37,8 +35,5 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     document: FakeDocumentBrowserState.documents[0]
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
+  }
 };

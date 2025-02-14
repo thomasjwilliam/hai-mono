@@ -14,7 +14,8 @@ const preview = {
       },
       darkClass: 'dark',
       stylePreview: true
-    }
+    },
+    layout: 'fullscreen'
   }
 }
 // export const parameters = {
