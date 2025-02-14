@@ -1,6 +1,6 @@
 <template>
   <div class="document">
-    <div>{{document.dateCreated}}</div>
+    <div class="date-created">{{document.dateCreated}}</div>
     <div>{{document.title}}</div>
     <div>{{document.content}}</div>
     <div>
@@ -39,4 +39,9 @@ const viewDoc = () => {
 </script>
 
 <style>
+@reference 'tailwindcss';
+
+.date-created {
+  @apply text-sm
+}
 </style>
