@@ -6,5 +6,6 @@ import './styles/app.css'
 export {default as primeVueTheme} from './styles/primevue'
 
 // Component library
-export {default as Icon} from './atoms/icon/Icon.vue'
+export {default as AppButton} from './atoms/button/Button.vue'
+export {default as AppIcon} from './atoms/icon/Icon.vue'
 export {default as DashboardPage} from './pages/dashboard/DashboardPage.vue'
