@@ -1,3 +1,5 @@
+<!--suppress ALL -->
+
 <template>
   <div class="container">
     <div class="app-grid">
@@ -177,9 +179,6 @@ header,
 footer {
   position: sticky;
   top: 0;
-}
-
-main {
 }
 
 .scrollable {

@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Header from './Header.vue';
+import Navigation from './Navigation.vue';
 
-describe('Header', () => {
+describe('Navigation', () => {
   it('renders properly', () => {
-    const wrapper = mount(Header, {
+    const wrapper = mount(Navigation, {
       props: {
         text: 'Click me',
       }
