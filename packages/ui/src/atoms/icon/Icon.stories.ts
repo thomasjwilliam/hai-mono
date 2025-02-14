@@ -1,13 +1,13 @@
-// noinspection HtmlUnknownAttribute
+// noinspection HtmlUnknownAttribute,JSUnusedGlobalSymbols
 
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
-import AppIcon from './AppIcon.vue';
+import Icon from './Icon.vue';
 import { icons } from './icons';
 
-const meta: Meta<typeof AppIcon> = {
-  title: 'Atoms/AppIcon',
-  component: AppIcon,
+const meta: Meta<typeof Icon> = {
+  title: 'Atoms/Icon',
+  component: Icon,
   // automatically generate docsPage
   // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
@@ -19,10 +19,11 @@ const meta: Meta<typeof AppIcon> = {
       control: 'select',
       options: [
         'text',
+        'text-inverse',
         'primary',
         'success',
         'secondary',
-        'error',
+        'danger',
         'warn'
       ]
     },
@@ -57,7 +58,7 @@ export const HomeIcon: Story = {
 
 export const IconGallery: Story = {
   render: () => ({
-    components: { AppIcon },
+    components: { AppIcon: Icon },
     setup() {
       const iconNames = Object.keys(icons);
       return { iconNames };
@@ -82,7 +83,7 @@ export const IconGallery: Story = {
 
 export const PredefinedSizes: Story = {
   render: () => ({
-    components: { AppIcon },
+    components: { AppIcon: Icon },
     template: `
       <div style="display: flex; gap: 1rem; align-items: center;">
         <div v-for="foo of bar">Predefined Sizes</div>

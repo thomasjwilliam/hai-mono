@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
 import PopupMenu from './PopupMenu.vue';

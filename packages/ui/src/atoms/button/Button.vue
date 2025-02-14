@@ -2,15 +2,15 @@
   <Button
     :disabled="disabled"
     :icon="icon"
-    :iconPos="iconPosition"
     :label="text"
+    :rounded="rounded"
     :severity="color"
     :size="size"
-    :variant="style"
+    :variant="variant"
     @click="onClick"
   >
     <template #icon v-if="icon">
-      <AppIcon :name="icon" />
+      <Icon :name="icon" :size="iconSize" :color="iconColor" />
     </template>
   </Button>
 </template>
@@ -19,35 +19,28 @@
 import {computed} from "vue";
 // https://primevue.org/button/
 import Button from 'primevue/button';
-import AppIcon, { IconNames }  from "../../atoms/icon/AppIcon.vue";
+import Icon, { IconNames }  from "../icon/Icon.vue";
 
-export interface Props {
-  color?: "primary" | "secondary" | "success" | "error" | "warn" | "text";
+const props = withDefaults(defineProps<{
+  color?: "primary" | "secondary" | "success" | "danger" | "warn" | "text";
   disabled?: boolean;
   icon?: IconNames;
-  iconPosition?: "left" | "right";
+  rounded?: boolean;
   size?: "sm" | "md" | "lg";
-  style?: "outlined" | "text" | "link";
+  variant?: "outlined" | "text" | "link";
   text?: string;
-}
-
-interface Emits {
-  (event: "click"): void;
-}
-
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   color: "primary",
-});
+})
 
-const emit = defineEmits<Emits>();
-const onClick = () => {
-  emit("click");
-};
+const emit = defineEmits<{
+  (e: 'click'): void
+}>()
 
 const color = computed(() => {
   if (props.color === "text") {
     return "contrast"
-  } else if (props.color === "error") {
+  } else if (props.color === "danger") {
     return "danger"
   } else {
     return props.color
@@ -63,6 +56,28 @@ const size = computed(() => {
     return undefined
   }
 })
+
+const iconColor = computed(() => {
+  if (!props.variant) {
+    return `--p-button-${props.color}-color`
+  } else {
+    return props.color
+  }
+})
+
+const iconSize = computed(() => {
+  if (props.size === "sm") {
+    return "sm"
+  } else if (props.size === "lg") {
+    return "lg"
+  } else {
+    return "md"
+  }
+})
+
+const onClick = () => {
+  emit("click");
+};
 </script>
 
 <style>

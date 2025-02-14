@@ -5,7 +5,14 @@ import components from './primevue/components'
 
 const customThemePreset = definePreset(Aura, {
   semantic: semantic,
-  components: components
+  components: components,
+  extend: {
+    app: {
+      color: {
+        inverse: "pink"
+      }
+    }
+  }
 });
 
 export default {

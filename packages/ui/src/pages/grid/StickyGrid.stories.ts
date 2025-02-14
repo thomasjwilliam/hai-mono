@@ -2,11 +2,11 @@
 
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
-import Dashboard from './DashboardPage.vue';
+import StickyGrid from './StickyGrid.vue';
 
-const meta: Meta<typeof Dashboard> = {
-  title: 'Pages/Dashboard',
-  component: Dashboard,
+const meta: Meta<typeof StickyGrid> = {
+  title: 'Pages/StickyGrid',
+  component: StickyGrid,
   // automatically generate docsPage
   // https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],

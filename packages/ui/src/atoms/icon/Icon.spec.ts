@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AppIcon from './AppIcon.vue';
+import Icon from './Icon.vue';
 
 vi.mock('./icons', () => {
   return {
@@ -11,14 +11,14 @@ vi.mock('./icons', () => {
 
 describe('AppIcon', () => {
   it('renders the component', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon' },
     });
     expect(wrapper.exists()).toBe(true);
   });
 
   it('sets the correct icon path based on the `name` prop', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon' },
     });
 
@@ -27,7 +27,7 @@ describe('AppIcon', () => {
   });
 
   it('applies styles based on the `size` prop (predefined sizes)', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon', size: 'lg' },
     });
 
@@ -37,7 +37,7 @@ describe('AppIcon', () => {
   });
 
   it('applies styles based on the `size` prop (numeric value)', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon', size: 50 },
     });
 
@@ -47,7 +47,7 @@ describe('AppIcon', () => {
   });
 
   it('applies styles based on the `size` prop (custom string value)', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon', size: '4rem' },
     });
 
@@ -57,7 +57,7 @@ describe('AppIcon', () => {
   });
 
   it('uses the default size when no `size` prop is provided', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon' },
     });
 
@@ -67,7 +67,7 @@ describe('AppIcon', () => {
   });
 
   it('applies the correct fill color based on the `color` prop', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon', color: 'primary' },
     });
 
@@ -76,7 +76,7 @@ describe('AppIcon', () => {
   });
 
   it('uses the default color when no `color` prop is provided', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon' },
     });
 
@@ -85,7 +85,7 @@ describe('AppIcon', () => {
   });
 
   it('renders a <title> element with the icon name', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon' },
     });
 
@@ -94,7 +94,7 @@ describe('AppIcon', () => {
   });
 
   it('applies custom size if prop size is a purely numeric string', () => {
-    const wrapper = mount(AppIcon, {
+    const wrapper = mount(Icon, {
       props: { name: 'mock-icon', size: '64' },
     });
 

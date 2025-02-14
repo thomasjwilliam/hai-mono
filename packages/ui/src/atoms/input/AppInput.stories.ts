@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
 import AppInput from './AppInput.vue';

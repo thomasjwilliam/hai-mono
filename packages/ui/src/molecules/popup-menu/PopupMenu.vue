@@ -13,7 +13,7 @@
       :style="styleObject"
     >
       <template #icon>
-        <AppIcon name="dots-vertical" :color="color" />
+        <Icon name="dots-vertical" :color="color" />
       </template>
     </Button>
     <Menu
@@ -28,7 +28,7 @@
 import {computed, ref} from "vue";
 import Button from 'primevue/button';
 import Menu from 'primevue/menu';
-import AppIcon from "../../atoms/icon/AppIcon.vue";
+import Icon from "../../atoms/icon/Icon.vue";
 
 interface MenuItem {
   icon?: string;
@@ -36,16 +36,14 @@ interface MenuItem {
   onClick?: () => void;
 }
 
-export interface Props {
+const props = withDefaults(defineProps<{
   color?: "text" | "primary" | "secondary" | "success" | "error" | "warn";
   disabled?: boolean;
   icon?: string;
   items: MenuItem[];
   size?: "small" | "large";
   style?: "outlined" | "text" | "link";
-}
-
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   color: "primary",
   disabled: false,
   icon: "pi pi-ellipsis-v",
@@ -61,9 +59,6 @@ const items = ref([
     }))
   }
 ]);
-const toggle = (event: Event) => {
-  menu.value.toggle(event);
-};
 
 const colorMap = {
   text: 'var(--p-text-color)',
@@ -79,6 +74,10 @@ const styleObject = computed(() => ({
     color: colorMap[props.color],
   }),
 }))
+
+const toggle = (event: Event) => {
+  menu.value.toggle(event);
+};
 
 </script>
 

@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import type {Meta, StoryObj} from '@storybook/vue3';
 // @ts-ignore
 import Button from './Button.vue';
@@ -14,9 +16,9 @@ const meta: Meta<typeof Button> = {
     color: 'primary',
     disabled: false,
     icon: '',
-    iconPosition: '',
+    rounded: false,
     size: '',
-    style: '',
+    variant: '',
     text: 'Button'
   },
   // args behaviour
@@ -29,7 +31,7 @@ const meta: Meta<typeof Button> = {
         'secondary',
         'success',
         'warn',
-        'error',
+        'danger',
         'text'
       ],
     },
@@ -41,15 +43,11 @@ const meta: Meta<typeof Button> = {
       control: 'select',
       options: Object.keys(icons)
     },
-    iconPosition: {
-      description: '(WIP) Button icon placement',
-      control: 'select',
-      options: [
-        'left',
-        'right',
-      ]
+    rounded: {
+      control: 'boolean',
     },
     size: {
+      description: "Note, does not work with icon only buttons. See https://github.com/primefaces/primevue/issues/7017",
       control: 'select',
       options: [
         'sm',
@@ -57,7 +55,7 @@ const meta: Meta<typeof Button> = {
         'lg',
       ]
     },
-    style: {
+    variant: {
       control: 'select',
       options: [
         'outlined',

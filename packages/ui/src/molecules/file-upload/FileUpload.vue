@@ -6,7 +6,7 @@
         :accept="accept"
         @uploader="onUpload()"
     />
-    <AppButton
+    <Button
         label="Upload"
         @click="upload"
     />
@@ -16,15 +16,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import FileUpload from 'primevue/fileupload';
-import AppButton from "../../atoms/button/AppButton.vue";
+import Button from "../../atoms/button/Button.vue";
 
-export interface Props {
+defineProps<{
   // .json or .csv
   accept: string
   onUpload: () => void;
-}
-
-defineProps<Props>()
+}>()
 
 const fileUpload = ref();
 
