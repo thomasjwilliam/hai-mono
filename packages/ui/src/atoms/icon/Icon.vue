@@ -1,7 +1,7 @@
 <template>
-  <span class="folder-icon">
+  <span class="app-icon">
     <svg
-      class="svg-icon"
+      class="app-icon__svg"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       :style="{
@@ -72,13 +72,13 @@ const iconPath = computed(() => {
 </script>
 
 <style>
-.folder-icon {
+.app-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.svg-icon {
+.app-icon__svg {
   display: block;
 }
 </style>
