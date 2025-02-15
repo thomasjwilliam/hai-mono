@@ -1,15 +1,3 @@
-<template>
-  <div class="document">
-    <p class="document__title">{{ document.title }}</p>
-    <p class="document__content">{{ document.content }}</p>
-    <div>
-      <Button @click="viewDoc" text="View" variant="text" size="sm"/>
-      <Button @click="editDoc" text="Edit" variant="text" size="sm"/>
-      <Button @click="deleteDoc" text="Delete" variant="text" size="sm" color="danger"/>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import Button from "../../atoms/button/Button.vue";
 import type {DocumentListItem} from "./DocumentBrowser.state";
@@ -36,6 +24,18 @@ const viewDoc = () => {
   emit('view-doc', props.document.id);
 };
 </script>
+
+<template>
+  <div class="document">
+    <p class="document__title">{{ document.title }}</p>
+    <p class="document__content">{{ document.content }}</p>
+    <div>
+      <Button @click="viewDoc" text="View" variant="text" size="sm"/>
+      <Button @click="editDoc" text="Edit" variant="text" size="sm"/>
+      <Button @click="deleteDoc" text="Delete" variant="text" size="sm" color="danger"/>
+    </div>
+  </div>
+</template>
 
 <style>
 @reference 'tailwindcss';

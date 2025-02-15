@@ -1,24 +1,3 @@
-<template>
-  <div class="">
-    <Button
-      type="button"
-      :disabled="disabled"
-      :icon="icon"
-      :severity="color"
-      :size="size"
-      :variant="variant"
-      aria-haspopup="true"
-      aria-controls="overlay_menu"
-      @click="toggle"
-    />
-    <Menu
-      ref="menu"
-      id="overlay_menu"
-      :model="items"
-      :popup="true" />
-  </div>
-</template>
-
 <script setup lang="ts">
 import {ref} from "vue";
 import Button from '../../atoms/button/Button.vue';
@@ -60,6 +39,27 @@ const toggle = (event: Event) => {
 };
 
 </script>
+
+<template>
+  <div class="">
+    <Button
+      type="button"
+      :disabled="disabled"
+      :icon="icon"
+      :severity="color"
+      :size="size"
+      :variant="variant"
+      aria-haspopup="true"
+      aria-controls="overlay_menu"
+      @click="toggle"
+    />
+    <Menu
+      ref="menu"
+      id="overlay_menu"
+      :model="items"
+      :popup="true" />
+  </div>
+</template>
 
 <style>
 </style>

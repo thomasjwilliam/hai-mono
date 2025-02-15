@@ -1,3 +1,34 @@
+<script setup lang="ts">
+import type {IconProps} from "../../atoms/icon/Icon";
+import Icon from "../../atoms/icon/Icon.vue";
+
+type ListItem = {
+  actions?: Array<{
+    icon: IconProps;
+    onClick: () => void;
+  }>;
+  icon: IconProps;
+  id?: string;
+  title: string;
+}
+
+defineProps<{
+  icon?: IconProps;
+  items: ListItem[];
+  title: string;
+}>()
+
+const emit = defineEmits<{
+  (e: 'click-item', id: string): void
+}>()
+
+const handleClick = (item: ListItem) => {
+  if (item.id) {
+    emit('click-item', item.id);
+  }
+};
+</script>
+
 <template>
   <div class="list">
     <div class="list__header">
@@ -30,39 +61,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import type {IconProps} from "../../atoms/icon/Icon";
-import Icon from "../../atoms/icon/Icon.vue";
-
-type ListItem = {
-  actions?: Array<{
-    icon: IconProps;
-    onClick: () => void;
-  }>;
-  icon: IconProps;
-  id?: string;
-  title: string;
-}
-
-defineProps<{
-  icon?: IconProps;
-  items: ListItem[];
-  title: string;
-}>()
-
-const emit = defineEmits<{
-  (e: 'click-item', id: string): void
-}>()
-
-const handleClick = (item: ListItem) => {
-  if (item.id) {
-    emit('click-item', item.id);
-  }
-};
-</script>
-
 <style>
-
 .list {
   width: 100%;
 }

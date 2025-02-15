@@ -1,28 +1,3 @@
-<template>
-  <div>
-    <template v-if="loading">
-      <Skeleton height="1rem" width="100px" style="margin-bottom: 4px"></Skeleton>
-      <Skeleton height="1rem" width="400px" style="margin-bottom: 8px"></Skeleton>
-      <Skeleton height="3rem" width="600px"></Skeleton>
-    </template>
-    <template v-else-if="isEmpty">
-      <p>No documents</p>
-      <p>Go create one</p>
-    </template>
-    <template v-else>
-      <div class="document-list">
-        <DocumentListItem
-          v-for="document in documents" :key="document.id"
-          :document="document"
-          @delete-doc="onDeleteDoc"
-          @edit-doc="onEditDoc"
-          @view-doc="onViewDoc"
-        />
-      </div>
-    </template>
-  </div>
-</template>
-
 <script setup lang="ts">
 import {computed} from "vue";
 import Skeleton from 'primevue/skeleton';
@@ -57,6 +32,31 @@ const onViewDoc = (id: string) => {
 };
 
 </script>
+
+<template>
+  <div>
+    <template v-if="loading">
+      <Skeleton height="1rem" width="100px" style="margin-bottom: 4px"></Skeleton>
+      <Skeleton height="1rem" width="400px" style="margin-bottom: 8px"></Skeleton>
+      <Skeleton height="3rem" width="600px"></Skeleton>
+    </template>
+    <template v-else-if="isEmpty">
+      <p>No documents</p>
+      <p>Go create one</p>
+    </template>
+    <template v-else>
+      <div class="document-list">
+        <DocumentListItem
+          v-for="document in documents" :key="document.id"
+          :document="document"
+          @delete-doc="onDeleteDoc"
+          @edit-doc="onEditDoc"
+          @view-doc="onViewDoc"
+        />
+      </div>
+    </template>
+  </div>
+</template>
 
 <style>
 @reference 'tailwindcss';

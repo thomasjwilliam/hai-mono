@@ -1,21 +1,3 @@
-<template>
-  <span class="app-icon">
-    <svg
-      class="app-icon__svg"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      :style="{
-        width: computedSize,
-        height: computedSize,
-        fill: computedFill,
-      }"
-    >
-      <title>{{name}}</title>
-      <path :d="iconPath" />
-    </svg>
-  </span>
-</template>
-
 <script setup lang="ts">
 import {computed} from "vue";
 import {icons} from "./icons";
@@ -70,6 +52,24 @@ const iconPath = computed(() => {
 })
 
 </script>
+
+<template>
+  <span class="app-icon">
+    <svg
+      class="app-icon__svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      :style="{
+        width: computedSize,
+        height: computedSize,
+        fill: computedFill,
+      }"
+    >
+      <title>{{name}}</title>
+      <path :d="iconPath" />
+    </svg>
+  </span>
+</template>
 
 <style>
 .app-icon {

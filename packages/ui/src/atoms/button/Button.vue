@@ -1,25 +1,9 @@
-<template>
-  <Button
-    :disabled="disabled"
-    :icon="icon"
-    :label="text"
-    :rounded="rounded"
-    :severity="color"
-    :size="size"
-    :variant="variant"
-    @click="onClick"
-  >
-    <template #icon v-if="icon">
-      <Icon :name="icon" :size="iconSize" :color="iconColor" />
-    </template>
-  </Button>
-</template>
-
 <script setup lang="ts">
 import {computed} from "vue";
 // https://primevue.org/button/
 import Button from 'primevue/button';
-import Icon, { IconNames }  from "../icon/Icon.vue";
+import { IconNames }  from "../icon/Icon";
+import Icon  from "../icon/Icon.vue";
 
 const props = withDefaults(defineProps<{
   color?: "primary" | "secondary" | "success" | "danger" | "warn" | "text";
@@ -79,6 +63,23 @@ const onClick = (event: Event) => {
   emit("click", event);
 };
 </script>
+
+<template>
+  <Button
+    :disabled="disabled"
+    :icon="icon"
+    :label="text"
+    :rounded="rounded"
+    :severity="color"
+    :size="size"
+    :variant="variant"
+    @click="onClick"
+  >
+    <template #icon v-if="icon">
+      <Icon :name="icon" :size="iconSize" :color="iconColor" />
+    </template>
+  </Button>
+</template>
 
 <style>
 </style>

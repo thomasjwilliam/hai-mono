@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <div class="container">
     <div class="app-grid">
@@ -101,9 +104,6 @@
     </footer>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style>
 .pos-absolute {

@@ -1,18 +1,3 @@
-<template>
-  <div>
-    <FileUpload
-        ref="fileUpload"
-        mode="basic"
-        :accept="accept"
-        @uploader="onUpload()"
-    />
-    <Button
-        label="Upload"
-        @click="upload"
-    />
-  </div>
-</template>
-
 <script setup lang="ts">
 import {computed, ref} from 'vue';
 // https://primevue.org/fileupload/
@@ -37,5 +22,19 @@ const fileUpload = ref();
 const upload = () => {
   fileUpload.value.upload();
 };
-
 </script>
+
+<template>
+  <div>
+    <FileUpload
+        ref="fileUpload"
+        mode="basic"
+        :accept="accept"
+        @uploader="onUpload()"
+    />
+    <Button
+        label="Upload"
+        @click="upload"
+    />
+  </div>
+</template>

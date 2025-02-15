@@ -1,16 +1,6 @@
 <!--suppress ALL -->
-<template>
-  <nav>
-    <ul>
-      <li v-for="item in items">
-        <a :href="item.link">{{item.text}}</a>
-      </li>
-    </ul>
-  </nav>
-</template>
 
 <script setup lang="ts">
-
 interface NavItem {
   icon?: string;
   text: string;
@@ -22,6 +12,16 @@ defineProps<{
 }>()
 
 </script>
+
+<template>
+  <nav>
+    <ul>
+      <li v-for="item in items">
+        <a :href="item.link">{{item.text}}</a>
+      </li>
+    </ul>
+  </nav>
+</template>
 
 <style scoped>
 nav {
