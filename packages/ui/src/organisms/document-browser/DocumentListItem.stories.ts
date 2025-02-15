@@ -7,7 +7,7 @@ import DocumentListItem from './DocumentListItem.vue';
 import {FakeDocumentBrowserState} from "./DocumentBrowser.state";
 
 /**
- * Issue: Vue3 Automatic inferenced argTypes don't work well
+ * Issue: Vue3 Automatic inference argTypes don't work well
  * https://github.com/storybookjs/storybook/issues/23079
  */
 export const ActionsData = {
