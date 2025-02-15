@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import {icons} from "./icons";
-import type { ColorNames, IconProps } from './Icon.ts';
+import type { ColorNames, IconProps } from './Icon';
 
 const props = withDefaults(defineProps<IconProps>(), {
   color: 'text',
