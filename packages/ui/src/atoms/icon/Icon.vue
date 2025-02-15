@@ -19,16 +19,9 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import {icons} from "./icons";
+import type { ColorNames, IconProps } from './Icon.ts';
 
-type ColorNames = "primary" | "secondary" | "success" | "danger" | "warn"  | "text"  | "text-inverse"
-export type IconNames = keyof typeof icons;
-export type IconSize = 'sm' | 'md' | 'lg' | 'xl' | string | number;
-
-const props = withDefaults(defineProps<{
-  color?: ColorNames | string
-  name: IconNames
-  size?: IconSize;
-}>(), {
+const props = withDefaults(defineProps<IconProps>(), {
   color: 'text',
   size: 'md'
 })
