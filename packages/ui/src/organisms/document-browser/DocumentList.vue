@@ -1,5 +1,5 @@
 <template>
-  <div class="document-list">
+  <div>
     <template v-if="loading">
       <Skeleton height="1rem" width="100px" style="margin-bottom: 4px"></Skeleton>
       <Skeleton height="1rem" width="400px" style="margin-bottom: 8px"></Skeleton>
@@ -10,17 +10,15 @@
       <p>Go create one</p>
     </template>
     <template v-else>
-      <DataView :value="documents" dataKey="id">
-        <template #list="slotProps">
-          <DocumentListItem
-            v-for="document in slotProps.items" :key="document.id"
-            :document="document"
-            @delete-doc="onDeleteDoc"
-            @edit-doc="onEditDoc"
-            @view-doc="onViewDoc"
-          />
-        </template>
-      </DataView>
+      <div class="document-list">
+        <DocumentListItem
+          v-for="document in documents" :key="document.id"
+          :document="document"
+          @delete-doc="onDeleteDoc"
+          @edit-doc="onEditDoc"
+          @view-doc="onViewDoc"
+        />
+      </div>
     </template>
   </div>
 </template>
@@ -28,7 +26,6 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import Skeleton from 'primevue/skeleton';
-import DataView from 'primevue/dataview';
 import type {DocumentListItem as DocumentListItemType} from "./DocumentBrowser.state";
 import DocumentListItem from "./DocumentListItem.vue";
 
@@ -62,4 +59,10 @@ const onViewDoc = (id: string) => {
 </script>
 
 <style>
+@reference 'tailwindcss';
+
+.document-list > .document:not(:last-child) {
+  @apply
+  border-b-1 border-gray-200
+}
 </style>
