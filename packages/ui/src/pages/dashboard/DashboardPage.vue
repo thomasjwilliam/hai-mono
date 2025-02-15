@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Button from "../../atoms/button/Button.vue";
+import Icon from "../../atoms/icon/Icon.vue";
 </script>
 
 <template>
@@ -11,11 +13,11 @@
       </header>
     </div>
     <main class="app-grid">
-
       <div class="app-grid-span-6 d-flex flex-col">
-
+        <Button text="Button" />
+        <Icon name="home" />
         <div>
-          <div>simple</div>
+          <div class="simple-class">simple</div>
           <div>static</div>
         </div>
 
@@ -106,6 +108,12 @@
 </template>
 
 <style>
+@reference 'tailwindcss';
+
+.simple-class {
+  @apply text-xl font-bold;
+}
+
 .pos-absolute {
   position: absolute;
 }

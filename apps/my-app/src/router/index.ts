@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import HomeViewNew from '@tuskdesign/ui-vue-home'
-import HomeLayout from '../layout/home/HomeLayout.vue';
+// import HomeLayout from '../layout/home/HomeLayout.vue';
 import ComposerLayout from '../layout/composer/ComposerLayout.vue';
 import ComposerBody from '../views/composer/ComposerBody.vue'
 import DashboardLayout from '../layout/dashboard/DashboardLayout.vue';
 import DesignLayout from '../layout/design/DesignLayout.vue';
 import {DashboardPage} from '@tuskdesign/ui'
+import {HomePage} from '@tuskdesign/ui'
+import {TestPage} from '@tuskdesign/ui'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,7 +15,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeLayout
+      component: TestPage
     },
     {
       path: '/dashboard',
