@@ -21,7 +21,7 @@ const navItems = [{
 <template>
   <div>
     <Navigation :items="navItems" />
-    <h1>Test Page</h1>
+    <h1>Composer Page</h1>
     <Icon name="home" color="primary" />
     <Button label="Click Me" icon="home" color="warn" />
   </div>

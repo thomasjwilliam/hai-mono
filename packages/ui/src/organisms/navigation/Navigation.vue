@@ -1,10 +1,11 @@
 <!--suppress ALL -->
 
 <script setup lang="ts">
+import ThemeToggle from "./ThemeToggle.vue";
+
 interface NavItem {
-  icon?: string;
   text: string;
-  link?: string;
+  link: string;
 }
 
 defineProps<{
@@ -14,42 +15,15 @@ defineProps<{
 </script>
 
 <template>
-  <nav>
-    <ul>
-      <li v-for="item in items">
-        <a :href="item.link">{{item.text}}</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <router-link v-for="item in items" :to="item.link">
+        <span class="">{{item.text}}</span>
+      </router-link>
+    </div>
+    <ThemeToggle/>
+  </div>
 </template>
 
-<style scoped>
-nav {
-  border-bottom: 1px solid var(--p-content-border-color);
-  padding: 8px 16px;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin: 0 16px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--p-text-color);
-  transition: color var(--p-transition-duration) ease;
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--p-primary-500);
-}
+<style>
 </style>

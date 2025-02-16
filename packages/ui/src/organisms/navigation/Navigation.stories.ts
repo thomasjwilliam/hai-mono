@@ -15,20 +15,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const HomeNav: Story = {
+export const Default: Story = {
   args: {
     items: [{
-      text: 'Home'
-    }]
-  },
-};
-
-export const DashboardNav: Story = {
-  args: {
-    items: [{
-      text: 'Home'
+      text: 'HAI SAKAI',
+      link: '/'
     }, {
-      text: 'New'
+      text: 'Dashboard',
+      link: '/dashboard'
+    }, {
+      text: 'Composer',
+      link: '/composer'
+    }, {
+      text: 'Design',
+      link: '/design'
     }]
   },
 };

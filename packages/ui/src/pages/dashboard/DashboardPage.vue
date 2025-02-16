@@ -1,15 +1,28 @@
 <script setup lang="ts">
 import Button from "../../atoms/button/Button.vue";
 import Icon from "../../atoms/icon/Icon.vue";
+import Navigation from "../../organisms/navigation/Navigation.vue";
+
+const navItems = [{
+  text: 'HAI SAKAI',
+  link: '/'
+}, {
+  text: 'Dashboard',
+  link: '/dashboard'
+}, {
+  text: 'Composer',
+  link: '/composer'
+}, {
+  text: 'Test',
+  link: '/test'
+}]
 </script>
 
 <template>
   <div class="container">
     <div class="app-grid">
       <header class="app-grid-span-24">
-        <span class="logo">Logo</span>
-        <span>Link</span>
-        <span>Link</span>
+        <Navigation :items="navItems" />
       </header>
     </div>
     <main class="app-grid">

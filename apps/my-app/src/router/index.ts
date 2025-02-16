@@ -1,13 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeViewNew from '@tuskdesign/ui-vue-home'
-// import HomeLayout from '../layout/home/HomeLayout.vue';
-import ComposerLayout from '../layout/composer/ComposerLayout.vue';
-import ComposerBody from '../views/composer/ComposerBody.vue'
-import DashboardLayout from '../layout/dashboard/DashboardLayout.vue';
-import DesignLayout from '../layout/design/DesignLayout.vue';
-import {DashboardPage} from '@tuskdesign/ui'
-// import {HomePage} from '@tuskdesign/ui'
-import {TestPage} from '@tuskdesign/ui'
+import {
+  ComposerPage,
+  DashboardPage,
+  HomePage,
+  TestPage
+} from '@tuskdesign/ui'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,34 +12,34 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: TestPage
+      component: HomePage
     },
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: DashboardLayout
+      component: DashboardPage
     },
     {
       path: '/composer',
       name: 'composer',
-      component: ComposerLayout,
-      children: [
-        {
-          path: '',
-          name: 'composer-view',
-          component: ComposerBody
-        }
-      ]
+      component: ComposerPage
     },
+    // {
+    //   path: '/composer',
+    //   name: 'composer',
+    //   component: ComposerPage,
+    //   children: [
+    //     {
+    //       path: '',
+    //       name: 'composer-view',
+    //       component: ComposerBody
+    //     }
+    //   ]
+    // },
     {
-      path: '/design',
-      name: 'design',
-      component: DesignLayout
-    },
-    {
-      path: '/grid',
-      name: 'grid',
-      component: DashboardPage
+      path: '/test',
+      name: 'test',
+      component: TestPage
     },
     {
       path: '/about',
