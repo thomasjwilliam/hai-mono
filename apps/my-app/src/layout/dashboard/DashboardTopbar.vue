@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import AppButton from 'primevue/button';
+// import AppButton from 'primevue/button';
 import { useLayout } from '../layout';
-
 const { toggleDarkMode, isDarkTheme } = useLayout();
 </script>
 
@@ -21,10 +20,10 @@ const { toggleDarkMode, isDarkTheme } = useLayout();
         <span class="">design</span>
       </router-link>
     </div>
-    <AppButton
-        size="small"
-        @click="toggleDarkMode"
-        :icon="`pi ${isDarkTheme ? 'pi-moon' : 'pi-sun'}`"
-    />
+<!--    <AppButton-->
+<!--        size="small"-->
+<!--        @click="toggleDarkMode"-->
+<!--        :icon="`pi ${isDarkTheme ? 'pi-moon' : 'pi-sun'}`"-->
+<!--    />-->
   </div>
 </template>

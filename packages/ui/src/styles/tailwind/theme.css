@@ -1,0 +1,55 @@
+/*
+Map CSS variables to Tailwind utility classes
+https://tailwindcss.com/docs/theme
+*/
+@theme {
+    /* ====================================
+     * Typography
+     * ==================================== */
+    --font-sans: var(--font-sans);
+    --font-serif: var(--font-serif);
+    --font-mono: var(--font-mono);
+
+    /* ====================================
+     * Colors
+     * ==================================== */
+    /*
+    Reset all colors once confident it will not affect styling
+    @see https://tailwindcss.com/docs/theme#overriding-the-default-theme
+    */
+    /*--color-*: initial;*/
+
+    /*
+    Required colors by PrimeVue
+    @see https://github.com/primefaces/tailwindcss-primeui/blob/main/src/theme.js
+    */
+    --color-primary: var(--p-primary-color);
+    --color-primary-emphasis: var(--p-primary-hover-color);
+    --color-primary-emphasis-alt: var(--p-primary-active-color);
+    --color-primary-contrast: var(--p-primary-contrast-color);
+
+    --color-primary-50: var(--primary-color-50);
+    --color-primary-100: var(--primary-color-100);
+    --color-primary-200: var(--primary-color-200);
+    --color-primary-300: var(--primary-color-300);
+    --color-primary-400: var(--primary-color-400);
+    --color-primary-500: var(--primary-color-500);
+    --color-primary-600: var(--primary-color-600);
+    --color-primary-700: var(--primary-color-700);
+    --color-primary-800: var(--primary-color-800);
+    --color-primary-900: var(--primary-color-900);
+    --color-primary-950: var(--primary-color-950);
+
+    --color-surface-0: var(--surface-color-0);
+    --color-surface-50: var(--surface-color-50);
+    --color-surface-100: var(--surface-color-100);
+    --color-surface-200: var(--surface-color-200);
+    --color-surface-300: var(--surface-color-300);
+    --color-surface-400: var(--surface-color-400);
+    --color-surface-500: var(--surface-color-500);
+    --color-surface-600: var(--surface-color-600);
+    --color-surface-700: var(--surface-color-700);
+    --color-surface-800: var(--surface-color-800);
+    --color-surface-900: var(--surface-color-900);
+    --color-surface-950: var(--surface-color-950);
+}

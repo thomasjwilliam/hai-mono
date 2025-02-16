@@ -14,7 +14,7 @@ export default defineConfig({
     host: 'localhost',
   },
   plugins: [
-    vue()
+    vue(),
   ],
   // Uncomment this if you are using workers.
   // worker: {

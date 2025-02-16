@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import {primeVueTheme} from '@tuskdesign/ui';
+import {primevueThemeConfig} from '@tuskdesign/ui';
+// import primeVueTheme from './assets/styles/primevue/primevue';
 import 'primeicons/primeicons.css'
 import './assets/styles/app.css'
 import router from './router';
@@ -10,7 +11,8 @@ const app = createApp(App);
 app.use(router);
 
 app.use(PrimeVue, {
-  theme: primeVueTheme,
+  // theme: primeVueTheme,
+  theme: 'none',
 });
 
 app.mount('#root');

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppButton from "primevue/button";
+// import AppButton from "primevue/button";
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import AppButton from "primevue/button";
       <div class="text-primary font-bold mb-4"><i class="pi pi-users" />&nbsp;POWERED BY YOU</div>
       <div class="font-bold text-5xl mb-4">Human Accepted Interaction</div>
       <div class="text-2xl mb-8">A place to write and help your fellow human.</div>
-      <AppButton label="Get Started" />
+<!--      <AppButton label="Get Started" />-->
     </div>
   </div>
 </template>

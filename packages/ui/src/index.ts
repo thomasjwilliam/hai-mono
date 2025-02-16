@@ -1,9 +1,11 @@
-// app style
+// This adds app css to the dist/style.css bundle
+// import './assets/styles/main.css'
+
 // This adds app css to the dist/style.css bundle
 import './styles/app.css'
 
-// PrimeVue styling
-export {default as primeVueTheme} from './styles/primevue'
+// PrimeVue config
+export {default as primevueThemeConfig} from './styles/primevue/theme-config'
 
 // Component library
 export {default as AppButton} from './atoms/button/Button.vue'

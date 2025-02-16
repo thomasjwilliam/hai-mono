@@ -30,9 +30,9 @@ const viewDoc = () => {
     <p class="document__title">{{ document.title }}</p>
     <p class="document__content">{{ document.content }}</p>
     <div>
-      <Button @click="viewDoc" text="View" variant="text" size="sm"/>
-      <Button @click="editDoc" text="Edit" variant="text" size="sm"/>
-      <Button @click="deleteDoc" text="Delete" variant="text" size="sm" color="danger"/>
+      <Button @click="viewDoc" text="View" variant="text" size="small"/>
+      <Button @click="editDoc" text="Edit" variant="text" size="small"/>
+      <Button @click="deleteDoc" text="Delete" variant="text" size="small" color="danger"/>
     </div>
   </div>
 </template>

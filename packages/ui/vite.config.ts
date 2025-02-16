@@ -10,17 +10,26 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/packages/ui',
   plugins: [
     vue(),
-    dts({ entryRoot: 'src', tsconfigPath: path.join(__dirname, 'tsconfig.lib.json') }),
+    dts({
+      entryRoot: 'src',
+      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json')
+    }),
     tailwindcss(),
   ],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
+  resolve: {
+    alias: {
+      // '@': path.resolve(__dirname, './src'),
+    },
+  },
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
     outDir: './dist',
+    cssMinify: false,
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
@@ -37,7 +46,15 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: []
+      external: [
+        'vue',
+        // 'primevue',
+      ],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      }
     },
   },
   test: {

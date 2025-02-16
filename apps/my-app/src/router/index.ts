@@ -6,7 +6,7 @@ import ComposerBody from '../views/composer/ComposerBody.vue'
 import DashboardLayout from '../layout/dashboard/DashboardLayout.vue';
 import DesignLayout from '../layout/design/DesignLayout.vue';
 import {DashboardPage} from '@tuskdesign/ui'
-import {HomePage} from '@tuskdesign/ui'
+// import {HomePage} from '@tuskdesign/ui'
 import {TestPage} from '@tuskdesign/ui'
 
 const router = createRouter({
