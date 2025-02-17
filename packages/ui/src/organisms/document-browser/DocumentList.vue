@@ -1,3 +1,5 @@
+<!--suppress CssUnusedSymbol -->
+
 <script setup lang="ts">
 import {computed} from "vue";
 import Skeleton from 'primevue/skeleton';
