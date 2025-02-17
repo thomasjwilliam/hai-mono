@@ -2,6 +2,7 @@ import {setup} from "@storybook/vue3"
 import type {Preview} from "@storybook/vue3"
 import {themes} from '@storybook/theming';
 import {PrimeVueConfig, PrimeVueThemeConfig} from '../src'
+import router from './vue-router'
 
 const preview: Preview = {
   // Enables auto-generated documentation for all stories
@@ -22,6 +23,7 @@ const preview: Preview = {
 }
 
 setup((app) => {
+  app.use(router); // Register the router
   app.use(PrimeVueConfig, {
     theme: PrimeVueThemeConfig
   });
