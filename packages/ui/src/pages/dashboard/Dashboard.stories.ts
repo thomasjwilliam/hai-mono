@@ -7,7 +7,7 @@ import Dashboard from './DashboardPage.vue';
 const meta: Meta<typeof Dashboard> = {
   title: 'Pages/Dashboard',
   component: Dashboard,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   args: {},
   argTypes: {},
 }

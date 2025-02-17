@@ -7,7 +7,6 @@ import FileUpload from './FileUpload.vue';
 const meta: Meta<typeof FileUpload> = {
   title: 'Molecules/FileUpload',
   component: FileUpload,
-  tags: ['autodocs'],
   args: {
     primary: false
   },

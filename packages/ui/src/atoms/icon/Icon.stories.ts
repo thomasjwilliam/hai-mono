@@ -8,7 +8,6 @@ import { icons } from './icons';
 const meta: Meta<typeof Icon> = {
   title: 'Atoms/Icon',
   component: Icon,
-  tags: ['autodocs'],
   args: {
     color: 'text',
     name: "home",

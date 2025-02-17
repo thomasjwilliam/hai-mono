@@ -7,7 +7,7 @@ import StickyGrid from './StickyGrid.vue';
 const meta: Meta<typeof StickyGrid> = {
   title: 'Pages/StickyGrid',
   component: StickyGrid,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   args: {},
   argTypes: {},
 }

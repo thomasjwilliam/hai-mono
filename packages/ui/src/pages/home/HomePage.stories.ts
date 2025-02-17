@@ -7,7 +7,7 @@ import HomePage from './HomePage.vue';
 const meta: Meta<typeof HomePage> = {
   title: 'Pages/Home',
   component: HomePage,
-  tags: ['autodocs'],
+  tags: ['!autodocs'],
   args: {},
   argTypes: {},
 }

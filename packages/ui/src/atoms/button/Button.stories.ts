@@ -17,7 +17,6 @@ export const ActionsData = {
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
   component: Button,
-  tags: ['autodocs'],
   excludeStories: /.*Data$/,
   argTypes: {
     color: {

@@ -9,7 +9,6 @@ import * as DocumentListItemStories from './DocumentListItem.stories';
 const meta: Meta<typeof DocumentList> = {
   title: 'Organisms/DocumentBrowser/DocumentList',
   component: DocumentList,
-  tags: ['autodocs'],
   args: {
     ...DocumentListItemStories.ActionsData,
     documents: FakeDocumentBrowserState.documents,
