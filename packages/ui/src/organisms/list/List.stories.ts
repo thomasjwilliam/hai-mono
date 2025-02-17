@@ -16,7 +16,6 @@ export const ActionsData = {
 const meta: Meta<typeof List> = {
   title: 'Organisms/List',
   component: List,
-  tags: ['autodocs'],
   excludeStories: /.*Data$/,
   args: {
     ...ActionsData,

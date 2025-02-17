@@ -7,7 +7,6 @@ import Navigation from './Navigation.vue';
 const meta: Meta<typeof Navigation> = {
   title: 'Organisms/Navigation',
   component: Navigation,
-  tags: ['autodocs'],
   args: {},
   argTypes: {},
 }

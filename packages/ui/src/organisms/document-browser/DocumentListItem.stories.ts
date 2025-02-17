@@ -19,7 +19,6 @@ export const ActionsData = {
 const meta: Meta<typeof DocumentListItem> = {
   title: 'Organisms/DocumentBrowser/DocumentListItem',
   component: DocumentListItem,
-  tags: ['autodocs'],
   excludeStories: /.*Data$/,
   args: {
     ...ActionsData,
