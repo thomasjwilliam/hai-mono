@@ -1,10 +1,6 @@
 import {setup} from "@storybook/vue3"
 import type {Preview} from "@storybook/vue3"
 import {themes} from '@storybook/theming';
-// import PrimeVue from 'primevue/config'
-// import primevueThemeConfig from '../src/styles/primevue/theme-config';
-import '../src/styles/app.css'
-
 import {PrimeVueConfig, PrimeVueThemeConfig} from '../src'
 
 const preview: Preview = {
@@ -26,10 +22,6 @@ const preview: Preview = {
 }
 
 setup((app) => {
-  // app.use(PrimeVue, {
-  //   theme: primevueThemeConfig
-  // });
-
   app.use(PrimeVueConfig, {
     theme: PrimeVueThemeConfig
   });

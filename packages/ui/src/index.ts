@@ -1,10 +1,10 @@
 import PrimeVue from "primevue/config";
 
 // This adds app css to the dist/style.css bundle
-// import './assets/styles/main.css'
+import './assets/styles/style.css'
 
 // This adds app css to the dist/style.css bundle
-import './styles/app.css'
+// import './styles/app.css'
 
 // PrimeVue config
 /**
@@ -12,7 +12,7 @@ import './styles/app.css'
  * @see https://github.com/orgs/primefaces/discussions/2158#discussioncomment-12015531
  */
 export {PrimeVue as PrimeVueConfig}
-export {default as PrimeVueThemeConfig} from './styles/primevue/theme-config'
+export {default as PrimeVueThemeConfig} from './assets/styles/primevue/theme-config'
 
 // Component library
 export {default as AppButton} from './atoms/button/Button.vue'
