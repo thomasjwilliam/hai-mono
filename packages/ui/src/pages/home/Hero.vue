@@ -14,7 +14,7 @@ import Button from "../../atoms/button/Button.vue";
 </template>
 
 <style>
-@reference 'tailwindcss';
+@reference '../../styles/app.css';
 
 .hero {
   @apply px-6 py-20 md:px-12 lg:px-20

@@ -59,7 +59,7 @@ const onViewDoc = (id: string) => {
 </template>
 
 <style>
-@reference 'tailwindcss';
+@reference '../../styles/app.css';
 
 .document-list > .document:not(:last-child) {
   @apply
