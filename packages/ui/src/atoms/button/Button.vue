@@ -56,7 +56,7 @@ const severity = computed(() => {
 
 <style>
 /*@reference '../../assets/styles/main.css';*/
-@reference '../../styles/app.css';
+@reference '../../assets/styles/style.css';
 
 .p-button {
   @apply inline-flex cursor-pointer select-none items-center justify-center overflow-hidden relative

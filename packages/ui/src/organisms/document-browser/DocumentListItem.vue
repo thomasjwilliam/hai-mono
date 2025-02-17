@@ -38,7 +38,7 @@ const viewDoc = () => {
 </template>
 
 <style>
-@reference '../../styles/app.css';
+@reference '../../assets/styles/style.css';
 
 .document {
   @apply p-4

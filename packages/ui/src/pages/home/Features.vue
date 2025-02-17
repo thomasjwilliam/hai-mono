@@ -53,7 +53,7 @@ const features = [{
 </template>
 
 <style>
-@reference '../../styles/app.css';
+@reference '../../assets/styles/style.css';
 
 .features__grid {
   @apply mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3

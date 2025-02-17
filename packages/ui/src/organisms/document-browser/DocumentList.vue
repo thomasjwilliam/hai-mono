@@ -59,7 +59,7 @@ const onViewDoc = (id: string) => {
 </template>
 
 <style>
-@reference '../../styles/app.css';
+@reference '../../assets/styles/style.css';
 
 .document-list > .document:not(:last-child) {
   @apply
