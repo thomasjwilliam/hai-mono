@@ -50,6 +50,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         'primevue',
+        '@tuskdesign/client-app'
       ],
       output: {
         globals: {

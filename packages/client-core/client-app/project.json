@@ -1,0 +1,9 @@
+{
+  "name": "@tuskdesign/client-app",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/client-core/client-app/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @tuskdesign/client-app --web",
+  "targets": {}
+}

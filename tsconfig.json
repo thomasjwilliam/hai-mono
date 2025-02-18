@@ -14,6 +14,12 @@
     },
     {
       "path": "./packages/ui-vue-home"
+    },
+    {
+      "path": "./packages/client-core/client-dashboard"
+    },
+    {
+      "path": "./packages/client-core/client-app"
     }
   ],
   "ts-node": {

@@ -40,5 +40,10 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
+  ],
+  "references": [
+    {
+      "path": "../client-core/client-app/tsconfig.lib.json"
+    }
   ]
 }
