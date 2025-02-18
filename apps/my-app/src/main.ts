@@ -1,32 +1,18 @@
 import { createApp } from 'vue';
-
-// import PrimeVue from 'primevue/config';
+import {ClientCore} from "@hai/client-app";
 import {PrimeVueConfig} from '@hai/ui';
 import {PrimeVueThemeConfig} from '@hai/ui';
-// import primeVueTheme from './assets/styles/primevue/primevue';
-
-// import 'primeicons/primeicons.css'
-
 import './assets/styles/app.css'
 import router from './router';
 import App from './app/App.vue';
 
+const clientCore = new ClientCore();
+
 const app = createApp(App);
 app.use(router);
-
+app.provide('core', clientCore);
 app.use(PrimeVueConfig, {
   theme: PrimeVueThemeConfig,
-  // theme: 'none',
-  // theme: {
-  //   preset: 'none',
-  //   options: {
-  //     cssLayer: {
-  //       name: 'primeui',
-  //       order: 'primeui, theme'
-  //     },
-  //     darkModeSelector: '.dark',
-  //   }
-  // },
 });
 
 app.mount('#root');

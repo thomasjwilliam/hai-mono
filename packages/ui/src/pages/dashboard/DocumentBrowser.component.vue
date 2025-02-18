@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {inject, onMounted, onUnmounted, ref} from "vue";
-import {ClientCore} from "../../assets/client-core/app/src/core";
-import {DocumentBrowserState} from "../../assets/client-core/dashboard/document-browser/document-browser";
+import {ClientCore} from "@hai/client-app";
+import type {DocumentBrowserState} from "@hai/client-dashboard";
 import DocumentList from "../../organisms/document-browser/DocumentList.vue";
 
 const core = inject('core') as ClientCore

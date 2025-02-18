@@ -50,7 +50,8 @@ export default defineConfig({
         'vue',
         'vue-router',
         'primevue',
-        '@hai/client-app'
+        '@hai/client-app',
+        "@hai/client-dashboard"
       ],
       output: {
         globals: {

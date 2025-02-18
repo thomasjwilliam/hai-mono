@@ -1,30 +1,6 @@
-import {Observable} from "../../utils/Observable";
-import {ProblemDetails} from "../../utils/ProblemDetails";
-import {FakeDocumentBrowserState} from "../../../../organisms/document-browser/DocumentBrowser.state";
-
-export interface DocumentBrowserState {
-  documents: DocumentListItem[];
-  problems?: ProblemDetails;
-}
-
-export type DocumentListItem = {
-  id: string
-  title: string
-  content: string
-  context: Array<{
-    id: string
-    // the full http reference path where the context source can be found
-    href: string
-    rel: "primary" | "supplementary"
-    // whether the context description is available (i.e. uploaded)
-    available: boolean
-    // the browser tab id containing the href
-    tabId: number | undefined
-  }>
-  dateCreated: Date
-  dateModified: Date
-  metadata: Array<{ name: string; content: string }>
-}
+import {Observable} from "./Observable.js";
+import {FakeDocumentBrowserState} from "./FakeDocumentBrowserState.js";
+import {DocumentBrowserState} from "./document-browser-state.js";
 
 const initialDocumentBrowserState: DocumentBrowserState = {
   documents: [],

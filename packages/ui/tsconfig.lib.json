@@ -43,6 +43,9 @@
   ],
   "references": [
     {
+      "path": "../client-core/client-dashboard/tsconfig.lib.json"
+    },
+    {
       "path": "../client-core/client-app/tsconfig.lib.json"
     }
   ]

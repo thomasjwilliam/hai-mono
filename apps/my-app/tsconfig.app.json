@@ -40,6 +40,9 @@
   "references": [
     {
       "path": "../../packages/ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/client-core/client-app/tsconfig.lib.json"
     }
   ]
 }

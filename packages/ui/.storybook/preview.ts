@@ -3,7 +3,7 @@ import type {Preview} from "@storybook/vue3"
 import {themes} from '@storybook/theming';
 import {PrimeVueConfig, PrimeVueThemeConfig} from '../src'
 import router from './vue-router'
-import {ClientCore} from '../src/assets/client-core/app/src/core'
+import {ClientCore} from '@hai/client-app'
 
 const preview: Preview = {
   // Enables auto-generated documentation for all stories
