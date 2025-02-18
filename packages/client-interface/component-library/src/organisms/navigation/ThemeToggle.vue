@@ -24,8 +24,10 @@ const executeDarkModeToggle = () => {
 <template>
   <div class="flex">
     <Button
-        color="secondary"
+        color="primary"
         label="Toggle Theme"
+        size="small"
+        variant="text"
         @click="toggleDarkMode"
     />
   </div>
