@@ -4,35 +4,45 @@
 @import "./tailwind/theme.css";
 
 /* https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually */
+/* noinspection CssInvalidAtRule */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* noinspection CssInvalidAtRule */
 @utility border-surface {
     border-color: var(--p-content-border-color)
 }
+/* noinspection CssInvalidAtRule */
 @utility bg-emphasis {
     background: var(--p-content-hover-background);
     color: var(--p-content-hover-color);
 }
+/* noinspection CssInvalidAtRule */
 @utility bg-highlight {
     background: var(--p-highlight-background);
     color: var(--p-highlight-color);
 }
+/* noinspection CssInvalidAtRule */
 @utility bg-highlight-emphasis {
     background: var(--p-highlight-focus-background);
     color: var(--p-highlight-focus-color)
 }
+/* noinspection CssInvalidAtRule */
 @utility rounded-border {
     border-radius: var(--p-content-border-radius)
 }
+/* noinspection CssInvalidAtRule */
 @utility text-color {
     color: var(--p-text-color)
 }
+/* noinspection CssInvalidAtRule */
 @utility text-color-emphasis {
     color: var(--p-text-hover-color)
 }
+/* noinspection CssInvalidAtRule */
 @utility text-muted-color {
     color: var(--p-text-muted-color)
 }
+/* noinspection CssInvalidAtRule */
 @utility text-muted-color-emphasis {
     color: var(--p-text-hover-muted-color)
 }
