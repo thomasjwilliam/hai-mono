@@ -1,0 +1,9 @@
+{
+  "name": "@hai/my-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/my-app/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @hai/my-app --web",
+  "targets": {}
+}
