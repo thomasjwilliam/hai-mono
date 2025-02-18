@@ -4,23 +4,20 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/my-app-e2e"
-    },
-    {
       "path": "./apps/my-app"
     },
     {
-      "path": "./packages/client-interface/component-library"
+      "path": "./apps/my-app-e2e"
     },
     {
-      "path": "./packages/ui-vue-home"
+      "path": "./packages/client-core/client-app"
     },
     {
       "path": "./packages/client-core/client-dashboard"
     },
     {
-      "path": "./packages/client-core/client-app"
-    }
+      "path": "./packages/client-interface/component-library"
+    },
   ],
   "ts-node": {
     "compilerOptions": {
