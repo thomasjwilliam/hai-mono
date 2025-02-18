@@ -4,7 +4,7 @@ import {
   DashboardPage,
   HomePage,
   TestPage
-} from '@tuskdesign/ui'
+} from '@hai/ui'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

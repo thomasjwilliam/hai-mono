@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
 
 // import PrimeVue from 'primevue/config';
-import {PrimeVueConfig} from '@tuskdesign/ui';
-import {PrimeVueThemeConfig} from '@tuskdesign/ui';
+import {PrimeVueConfig} from '@hai/ui';
+import {PrimeVueThemeConfig} from '@hai/ui';
 // import primeVueTheme from './assets/styles/primevue/primevue';
 
 // import 'primeicons/primeicons.css'

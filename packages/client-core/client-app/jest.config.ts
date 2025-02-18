@@ -10,7 +10,7 @@ const swcJestConfig = JSON.parse(
 swcJestConfig.swcrc = false;
 
 export default {
-  displayName: '@tuskdesign/client-app',
+  displayName: '@hai/client-app',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {

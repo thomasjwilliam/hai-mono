@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Navigation from "../../organisms/navigation/Navigation.vue";
 import DocumentBrowserComponent from "./DocumentBrowser.component.vue"
-import {clientApp} from "@tuskdesign/client-app";
+import {clientApp} from "@hai/client-app";
 
 const title = clientApp();
 
