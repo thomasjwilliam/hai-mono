@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
 import {ClientCore} from "@hai/client-app";
-import {PrimeVueConfig} from '@hai/ui';
-import {PrimeVueThemeConfig} from '@hai/ui';
+import {PrimeVueConfig} from '@hai/component-library';
+import {PrimeVueThemeConfig} from '@hai/component-library';
+
 import './assets/styles/app.css'
 import router from './router';
 import App from './app/App.vue';

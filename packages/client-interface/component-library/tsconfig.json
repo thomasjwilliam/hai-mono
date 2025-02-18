@@ -1,13 +1,13 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "files": [],
   "include": [],
   "references": [
     {
-      "path": "../client-core/client-dashboard"
+      "path": "../../client-core/client-dashboard"
     },
     {
-      "path": "../client-core/client-app"
+      "path": "../../client-core/client-app"
     },
     {
       "path": "./tsconfig.lib.json"

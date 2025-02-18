@@ -10,7 +10,7 @@
       "path": "./apps/my-app"
     },
     {
-      "path": "./packages/ui"
+      "path": "./packages/client-interface/component-library"
     },
     {
       "path": "./packages/ui-vue-home"

@@ -4,10 +4,10 @@
   "include": [],
   "references": [
     {
-      "path": "../../packages/ui"
+      "path": "../../packages/client-core/client-app"
     },
     {
-      "path": "../../packages/client-core/client-app"
+      "path": "../../packages/client-interface/component-library"
     },
     {
       "path": "./tsconfig.app.json"

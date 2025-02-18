@@ -4,7 +4,7 @@ import {
   DashboardPage,
   HomePage,
   TestPage
-} from '@hai/ui'
+} from '@hai/component-library'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

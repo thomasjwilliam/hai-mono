@@ -2,8 +2,7 @@
   "name": "@hai/source",
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "packages/client-core/*"
+    "packages/**"
   ],
   "version": "1.0.0",
   "description": "",

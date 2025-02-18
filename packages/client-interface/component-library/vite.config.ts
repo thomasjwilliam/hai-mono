@@ -7,7 +7,7 @@ import * as path from 'path';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/ui',
+  cacheDir: '../../../node_modules/.vite/packages/ui',
   plugins: [
     vue(),
     dts({
