@@ -56,27 +56,31 @@ const features = [{
 @reference '../../assets/styles/style.css';
 
 .features__grid {
-  @apply mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3
+  @apply
+  mx-auto
+  grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3
 }
 
 .features__caption {
-  color: var(--primary-color-500);
-  @apply text-lg font-semibold leading-8 tracking-tight
+  @apply
+  text-lg text-primary font-semibold leading-8 tracking-tight
 }
 
 .features__title {
-  @apply mt-2 text-3xl font-bold tracking-tight sm:text-4xl
+  @apply
+  mt-2
+  text-3xl font-bold tracking-tight sm:text-4xl
 }
 
 .features__description {
-  @apply mt-6 text-base leading-7
+  @apply
+  mt-6
+  text-base leading-7
 }
 
 .feature-list {
   @apply
-  col-span-2 grid grid-cols-1 gap-x-8 gap-y-10
-  sm:grid-cols-2
-  lg:gap-y-16
+  col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:gap-y-16
   text-base leading-7
 }
 
@@ -94,13 +98,11 @@ const features = [{
 }
 
 .feature__title {
-  color: var(--primary-color-500);
   @apply
-  font-semibold
+  font-semibold text-primary
 }
 
 .feature__description {
-  color: var(--p-text-color);
   @apply
   mt-2
 }

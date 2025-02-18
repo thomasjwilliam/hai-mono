@@ -4,7 +4,7 @@ import Features from "./Features.vue";
 import Navigation from "../../organisms/navigation/Navigation.vue";
 
 const navItems = [{
-  text: 'HAI SAKAI',
+  text: 'HAI',
   link: '/'
 }, {
   text: 'Dashboard',

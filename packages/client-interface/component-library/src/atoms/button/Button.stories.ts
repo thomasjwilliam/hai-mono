@@ -34,7 +34,7 @@ const meta: Meta<typeof Button> = {
       control: 'boolean',
     },
     icon: {
-      description: '(WIP) Button icon name',
+      description: 'WIP color adjustment',
       control: 'select',
       options: Object.keys(icons)
     },
@@ -42,12 +42,19 @@ const meta: Meta<typeof Button> = {
       control: 'text',
     },
     size: {
-      description: "Note, does not work with icon only buttons. See https://github.com/primefaces/primevue/issues/7017",
       control: 'select',
       options: [
         'small',
         'md',
         'large',
+      ]
+    },
+    variant: {
+      control: 'select',
+      options: [
+        '',
+        'outlined',
+        'text',
       ]
     },
   },

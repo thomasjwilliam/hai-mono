@@ -27,17 +27,16 @@ const goToDashboard = () => {
 }
 
 .hero__caption {
-  color: var(--primary-color-500);
-  @apply font-bold mb-4
+  @apply
+  mb-4
+  font-bold text-primary-500
 }
 
 .hero__title {
-  color: var(--p-text-color);
   @apply font-bold text-5xl mb-4
 }
 
 .hero__subtitle {
-  color: var(--p-text-color);
   @apply text-2xl mb-8
 }
 </style>

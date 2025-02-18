@@ -27,12 +27,28 @@ const viewDoc = () => {
 
 <template>
   <div class="document">
-    <p class="document__title">{{ document.title }}</p>
+    <h2 class="document__title">{{ document.title }}</h2>
     <p class="document__content">{{ document.content }}</p>
     <div>
-      <Button @click="viewDoc" label="View" size="small"/>
-      <Button @click="editDoc" label="Edit" size="small"/>
-      <Button @click="deleteDoc" label="Delete" size="small" color="danger"/>
+      <Button
+          @click="viewDoc"
+          label="View"
+          size="small"
+          variant="text"
+      />
+      <Button
+          @click="editDoc"
+          label="Edit"
+          size="small"
+          variant="text"
+      />
+      <Button
+          @click="deleteDoc"
+          label="Delete"
+          size="small"
+          color="danger"
+          variant="text"
+      />
     </div>
   </div>
 </template>
@@ -40,18 +56,9 @@ const viewDoc = () => {
 <style>
 @reference '../../assets/styles/style.css';
 
-.document {
-  @apply p-4
-}
-
 .document__title {
-  color: var(--p-text-color);
   @apply
   text-xl font-bold
-}
-
-.document__content {
-  color: var(--p-text-color);
 }
 
 </style>

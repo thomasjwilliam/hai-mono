@@ -15,6 +15,6 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const InitialDashboard: Story = {
+export const Default: Story = {
   args: {},
 };

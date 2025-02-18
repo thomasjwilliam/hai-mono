@@ -1,5 +1,3 @@
-<!--suppress CssUnusedSymbol -->
-
 <script setup lang="ts">
 import {computed} from 'vue';
 import PrimeButton from 'primevue/button';
@@ -15,6 +13,7 @@ const props = withDefaults(defineProps<{
   icon?: IconNames;
   label?: string;
   size?: "small" | "large";
+  variant?: "outlined" | "text";
 }>(), {
   color: "primary",
 });
@@ -56,8 +55,8 @@ const severity = computed(() => {
   </PrimeButton>
 </template>
 
+<!--suppress CssUnusedSymbol -->
 <style>
-/*@reference '../../assets/styles/main.css';*/
 @reference '../../assets/styles/style.css';
 
 .p-button {
