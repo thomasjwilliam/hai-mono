@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 import Navigation from "../../organisms/navigation/Navigation.vue";
 import ComposerEditor from "./ComposerEditor.vue";
+
+const route = useRoute()
 
 const navItems = [{
   text: 'HAI',
@@ -29,6 +32,7 @@ const saveDoc = () => {
   <div>
     <Navigation :items="navItems" />
     <h1 class="text-4xl">Composer Page</h1>
+    <h2>{{route.params.id}}</h2>
     <ComposerEditor
         @save-doc="saveDoc"
     />

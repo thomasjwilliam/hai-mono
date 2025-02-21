@@ -31,7 +31,7 @@ const startNewDocument = () => {
 }
 
 const openDocument = (id: string) => {
-  vModel.deleteDocument(id)
+  router.push(`/composer/${id}`)
 }
 
 </script>
