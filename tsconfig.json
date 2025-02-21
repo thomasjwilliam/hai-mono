@@ -18,6 +18,9 @@
     {
       "path": "./packages/client-interface/component-library"
     },
+    {
+      "path": "./packages/client-core/client-composer"
+    }
   ],
   "ts-node": {
     "compilerOptions": {

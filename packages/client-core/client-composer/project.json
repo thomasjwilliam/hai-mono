@@ -1,0 +1,9 @@
+{
+  "name": "@hai/client-composer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/client-core/client-composer/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @hai/client-composer --web",
+  "targets": {}
+}
