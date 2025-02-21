@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {inject, onMounted, onUnmounted, ref} from "vue";
+import { useRouter } from 'vue-router'
 import {ClientCore} from "@hai/client-app";
 import type {DocumentBrowserState} from "@hai/client-dashboard";
-import DocumentList from "../../organisms/document-browser/DocumentList.vue";
+import DocumentBrowser from "./DocumentBrowser.vue";
 
 const core = inject('core') as ClientCore
 const vModel = core.getDocumentBrowser()
@@ -24,13 +25,24 @@ const deleteDocument = (id: string) => {
   vModel.deleteDocument(id)
 }
 
+const router = useRouter()
+const startNewDocument = () => {
+  router.push('/composer/new')
+}
+
+const openDocument = (id: string) => {
+  vModel.deleteDocument(id)
+}
+
 </script>
 
 <template>
   <div>
-    <DocumentList
+    <DocumentBrowser
         :documents="vState.documents"
         @delete-doc="deleteDocument"
+        @start-doc="startNewDocument"
+        @view-doc="openDocument"
     />
   </div>
 </template>
