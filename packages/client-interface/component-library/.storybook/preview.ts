@@ -1,7 +1,16 @@
 import {setup} from "@storybook/vue3"
 import type {Preview} from "@storybook/vue3"
 import {themes} from '@storybook/theming';
-import {PrimeVueConfig, PrimeVueThemeConfig} from '../src'
+
+// App theming
+import {
+  PrimeVueConfig,
+  // PrimeVueThemeConfig,
+  PrimeVueThemeAura
+} from '../src'
+// import 'primeicons/primeicons.css'
+// import '../src/assets/styles/style.css'
+
 import router from './vue-router'
 import {ClientCore} from '@hai/client-app'
 
@@ -26,10 +35,10 @@ const preview: Preview = {
 const clientCore = new ClientCore();
 
 setup((app) => {
-  app.use(router); // Register the router
+  app.use(router);
   app.provide('core', clientCore);
   app.use(PrimeVueConfig, {
-    theme: PrimeVueThemeConfig
+    theme: PrimeVueThemeAura
   });
 })
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Navigation from "../../organisms/navigation/Navigation.vue";
+import Message from "../../organisms/message/Message.vue";
+
 
 const navItems = [{
   text: 'HAI',
@@ -20,6 +22,7 @@ const navItems = [{
   <div>
     <Navigation :items="navItems" />
     <h1 class="text-4xl">Test Page</h1>
+    <Message title="Test Message" severity="success" icon="pi pi-check" closable />
   </div>
 </template>
 

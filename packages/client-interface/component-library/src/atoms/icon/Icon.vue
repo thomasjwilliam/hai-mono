@@ -11,10 +11,10 @@ const props = withDefaults(defineProps<IconProps>(), {
 const colorMap = {
   text: 'var(--p-text-color)',
   "text-inverse": 'var(--p-app-color-inverse)',
-  primary: 'var(--primary-color-500)',
-  secondary: 'var(--secondary-color-500)',
-  success: 'var(--success-color-500)',
-  danger: 'var(--error-color-500)',
+  primary: 'var(--color-primary-500)',
+  secondary: 'var(--color-secondary-500)',
+  success: 'var(--color-success-500)',
+  danger: 'var(--color-error-500)',
   warn: 'var(--warn-color-500)'
 }
 

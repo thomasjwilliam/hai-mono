@@ -72,7 +72,7 @@ describe('AppIcon', () => {
     });
 
     const svgElement = wrapper.find('.svg-icon');
-    expect(svgElement.attributes('style')).toContain('fill: var(--primary-color, #007bff);');
+    expect(svgElement.attributes('style')).toContain('fill: var(--color-primary, #007bff);');
   });
 
   it('uses the default color when no `color` prop is provided', () => {

@@ -1,7 +1,9 @@
 import PrimeVue from "primevue/config";
+import 'primeicons/primeicons.css'
+import '../src/assets/styles/style.css'
 
 // This adds app css to the dist/style.css bundle
-import './assets/styles/style.css'
+// import './assets/styles/style.css'
 
 // This adds app css to the dist/style.css bundle
 // import './styles/app.css'
@@ -13,6 +15,7 @@ import './assets/styles/style.css'
  */
 export {PrimeVue as PrimeVueConfig}
 export {default as PrimeVueThemeConfig} from './assets/styles/primevue/theme-config'
+export {default as PrimeVueThemeAura} from './assets/styles/primevue/aura-theme'
 
 // Component library
 export {default as AppButton} from './atoms/button/Button.vue'
