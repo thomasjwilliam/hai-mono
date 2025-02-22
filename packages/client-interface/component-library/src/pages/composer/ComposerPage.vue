@@ -2,8 +2,26 @@
 import { useRoute } from 'vue-router'
 import Navigation from "../../organisms/navigation/Navigation.vue";
 import ComposerEditor from "./ComposerEditor.vue";
+import {onMounted, ref} from "vue";
 
 const route = useRoute()
+
+const fakeComposerState = ref({
+  document: '',
+})
+
+onMounted(() => {
+  if (route.params.id === 'new') {
+    fakeComposerState.value.document = 'new document'
+  } else {
+    fakeComposerState.value.document = 'existing document'
+  }
+})
+
+/**
+ * Then watch for route changes
+ * https://router.vuejs.org/guide/essentials/dynamic-matching#Reacting-to-Params-Changes
+ */
 
 const navItems = [{
   text: 'HAI',
@@ -19,13 +37,7 @@ const navItems = [{
   link: '/test'
 }]
 
-const emit = defineEmits<{
-  (e: 'save-doc'): void
-}>()
-
-const saveDoc = () => {
-  emit('save-doc');
-};
+const saveDoc = () => {};
 </script>
 
 <template>
@@ -34,6 +46,7 @@ const saveDoc = () => {
     <h1 class="text-4xl">Composer Page</h1>
     <h2>{{route.params.id}}</h2>
     <ComposerEditor
+        :document-content="fakeComposerState.document"
         @save-doc="saveDoc"
     />
   </div>

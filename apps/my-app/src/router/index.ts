@@ -20,7 +20,7 @@ const router = createRouter({
       component: DashboardPage
     },
     {
-      path: '/composer/new',
+      path: '/composer/:id',
       name: 'composer-new',
       component: ComposerPage
     },

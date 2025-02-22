@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import Button from "../../atoms/button/Button.vue";
 
+defineProps<{
+  documentContent: string;
+}>()
+
 const emit = defineEmits<{
   (e: 'save-doc'): void
 }>()
@@ -14,7 +18,9 @@ const saveDoc = () => {
   <div>
     <textarea
         class="composer-editor__textarea"
-        placeholder="Enter your text here">
+        placeholder="Enter your text here"
+        v-model="documentContent"
+    >
     </textarea>
     <br>
     <Button
