@@ -1,0 +1,9 @@
+{
+  "name": "@hai/pwa-offline",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/pwa-offline/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @hai/pwa-offline --web",
+  "targets": {}
+}

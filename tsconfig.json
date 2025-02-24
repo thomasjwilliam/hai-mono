@@ -20,6 +20,12 @@
     },
     {
       "path": "./packages/client-core/client-composer"
+    },
+    {
+      "path": "./apps/pwa-offline-e2e"
+    },
+    {
+      "path": "./apps/pwa-offline"
     }
   ],
   "ts-node": {
