@@ -1,5 +1,12 @@
 {
   "name": "@hai/pwa-offline",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "vite-plugin-pwa": "^0.21.1",
+    "workbox-core": "^7.3.0",
+    "workbox-precaching": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-window": "^7.3.0"
+  }
 }
