@@ -36,6 +36,7 @@ jobs:
 
       # Sets the Netlify --prod flag when pushing to main branch
       # If not pushed to main branch, Netlify will generate a preview
+      # https://cli.netlify.com/commands/deploy/
       - name: Deploy to Netlify
         id: netlify_deploy
         run: |
