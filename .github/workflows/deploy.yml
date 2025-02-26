@@ -2,6 +2,9 @@ name: Deploy Hai local
 
 on: [push]
 
+env:
+  BRANCH_NAME: ${{ github.ref_name }}
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -31,11 +34,16 @@ jobs:
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
       - run: npx nx affected -t build
 
+      # Sets the Netlify --prod flag when pushing to main branch
+      # If not pushed to main branch, Netlify will generate a preview
       - name: Deploy to Netlify
         id: netlify_deploy
         run: |
+          prod_flag=""
+          if [ "$BRANCH_NAME" = "main" ]; then prod_flag="--prod"; fi
           netlify deploy \
             --dir apps/pwa-offline/dist \
             --filter @hai/pwa-offline \
             --site ${{ secrets.NETLIFY_HAI_LOCAL_SITE_ID }} \
-            --auth ${{ secrets.NETLIFY_HAI_LOCAL_API_TOKEN }}
+            --auth ${{ secrets.NETLIFY_HAI_LOCAL_API_TOKEN }} \
+            $prod_flag
