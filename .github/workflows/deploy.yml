@@ -36,6 +36,6 @@ jobs:
         run: |
           netlify deploy \
             --dir apps/pwa-offline/dist \
-            --filter hai-local \
+            --filter @hai/pwa-offline \
             --site ${{ secrets.NETLIFY_HAI_LOCAL_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_HAI_LOCAL_API_TOKEN }}
