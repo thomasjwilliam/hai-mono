@@ -32,3 +32,6 @@ storybook-static
 /qodana.yaml
 
 /apps/pwa-offline/dev-dist/
+
+# Local Netlify folder
+.netlify
