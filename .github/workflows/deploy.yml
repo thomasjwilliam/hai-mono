@@ -26,6 +26,15 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: retrieve affected apps
+        id: affectedApps
+        run: |
+          echo "AFFECTED_APPS=$(nx show projects --affected --type app)" >> $GITHUB_OUTPUT
+
+      - name: my output affected
+        run: |
+          printf "${{ join(steps.affectedApps.outputs.*, '\n') }}"          
+
       - name: Check for Affected Projects
         uses: 2coo/action-nx-affected@v2
         id: checkForAffected
