@@ -26,28 +26,34 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - uses: nrwl/nx-set-shas@v4
+      - name: Check for Affected Projects
+        uses: 2coo/action-nx-affected@v2
+        id: checkForAffected
 
-#      - name: Build project
-#        run: npm run build
+      - name: output affected
+        run: |
+          printf "${{ join(steps.checkForAffected.outputs.*, '\n') }}"
+
+#      - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: pnpm exec nx-cloud record -- echo Hello World
-      # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: npx nx affected -t build
+      # Nx Affected runs only tasks affected by the changes in this PR/commit.
+      # https://nx.dev/ci/features/affected
+#      - run: npx nx affected -t build
 
       # Deploy. Depends on if apps are affected
       # Sets the Netlify --prod flag when pushing to main branch
       # If not pushed to main branch, Netlify will generate a preview
       # https://cli.netlify.com/commands/deploy/
-      - name: Deploy to Netlify
-        id: netlify_deploy
-        run: |
-          prod_flag=""
-          if [ "$BRANCH_NAME" = "main" ]; then prod_flag="--prod"; fi
-          netlify deploy \
-            --dir apps/pwa-offline/dist \
-            --filter @hai/pwa-offline \
-            --site ${{ secrets.NETLIFY_HAI_LOCAL_SITE_ID }} \
-            --auth ${{ secrets.NETLIFY_HAI_LOCAL_API_TOKEN }} \
-            $prod_flag
+#      - name: Deploy to Netlify
+#        id: netlify_deploy
+#        run: |
+#          prod_flag=""
+#          if [ "$BRANCH_NAME" = "main" ]; then prod_flag="--prod"; fi
+#          netlify deploy \
+#            --dir apps/pwa-offline/dist \
+#            --filter @hai/pwa-offline \
+#            --site ${{ secrets.NETLIFY_HAI_LOCAL_SITE_ID }} \
+#            --auth ${{ secrets.NETLIFY_HAI_LOCAL_API_TOKEN }} \
+#            $prod_flag
