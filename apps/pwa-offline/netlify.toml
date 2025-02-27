@@ -1,5 +1,3 @@
-[build]
-    publish = "apps/pwa-offline/dist"
 [[redirects]]
     from = "/*"
     to = "/index.html"
