@@ -20,7 +20,7 @@ const navItems = [{
 <template>
   <div class="container">
     <Navigation :items="navItems" />
-    <h1 class="text-4xl">Dashboard Page!</h1>
+    <h1 class="text-4xl">Dashboard Page</h1>
     <DocumentBrowserComponent />
   </div>
 </template>

@@ -97,7 +97,7 @@ onUnmounted(() => {
   </header>
   <RouterView v-if="true"/>
 
-  <h1>Notes</h1>
+  <h2>Notes</h2>
 
   <button @click="startNote">
     Start note
