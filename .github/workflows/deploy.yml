@@ -36,6 +36,7 @@ jobs:
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
       - run: npx nx affected -t build
 
+      # Deploy. Depends on if apps are affected
       # Sets the Netlify --prod flag when pushing to main branch
       # If not pushed to main branch, Netlify will generate a preview
       # https://cli.netlify.com/commands/deploy/
