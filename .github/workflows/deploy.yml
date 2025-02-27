@@ -20,16 +20,16 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - name: Install Netlify
-        run: npm install netlify-cli@17.10.1 -g
-
-      - name: Install Dependencies
-        run: npm ci
+#      - name: Install Netlify
+#        run: npm install netlify-cli@17.10.1 -g
+#
+#      - name: Install Dependencies
+#        run: npm ci
 
       - name: retrieve affected apps
         id: affectedApps
         run: |
-          echo "AFFECTED_APPS=$(nx show projects --affected --type app)" >> $GITHUB_OUTPUT
+          echo "AFFECTED_APPS=$(npx nx show projects --affected --type app)" >> $GITHUB_OUTPUT
 
       - name: my output affected
         run: |
